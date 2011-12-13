@@ -17,6 +17,13 @@ function t6(){
 	return my_num;
 }
 
+function t10(){
+        var my_num=Math.random();
+        my_num=Math.floor(my_num*10+1);
+        document.f1.t2.value=my_num;    
+	return my_num;
+}
+
 function t100(){
         var my_num=Math.random();
         my_num=Math.floor(my_num*100+1);
@@ -24,19 +31,76 @@ function t100(){
 	return my_num;
 }
 
-function find_hit(hitsel,hitnum){
-	var high_target=["Ansikte [1]"];
-	var normal_target=["Ansikte [1]","Ansikte [1]","Hals [3]"];
+function find_hit(hitsel,hitnum,dmgtype){
 
-	document.f1.t3.value=hitsel;
-	switch (hitsel)
+	//document.f1.t3.value=hitsel+dmgtype;
+
+
+	switch (hitsel+dmgtype)
 	{
-		case "normal":
-			document.f1.t3.value=normal_target[hitnum-1];
+		case "normalhugg":
+			//document.f1.t3.value=hitsel+dmgtype;
+			switch (true) //Träfftabell för normalt hugg-slag:
+			{
+				case ((hitnum >= 1) && (hitnum <= 20)):
+					document.f1.t3.value="Huvud";
+					//huvud
+					break;
+				case ((hitnum >= 21) && (hitnum <= 40)):
+					document.f1.t3.value="Vänster arm";
+					//Vänster arm
+					break;
+				case ((hitnum >= 41) && (hitnum <= 60)):
+					document.f1.t3.value="Höger arm";
+					//Höger arm
+					break;
+				case ((hitnum >= 61) && (hitnum <= 70)):
+					document.f1.t3.value="Bröstkorg";
+					//Bröstkorg
+					break;
+				case ((hitnum >= 71) && (hitnum <= 80)):
+					document.f1.t3.value="Buk";
+					//Buk
+					break;
+				case ((hitnum >= 81) && (hitnum <= 90)):
+					document.f1.t3.value="Vänster ben";
+					//Vänster ben
+					break;
+				case ((hitnum >= 91) && (hitnum <= 100)):
+					document.f1.t3.value="Höger ben";
+					//Höger ben
+					break;
+
+			}
 			break;
-		case "high":
-			document.f1.t3.value=high_target[hitnum-1];
+		case "highhugg":
+			switch (true) //Träfftabell för högt hugg-slag
+			{
+				case ((hitnum >= 1) && (hitnum <= 30)):
+					document.f1.t3.value="Huvud";
+					//huvud
+					break;
+				case ((hitnum >= 31) && (hitnum <= 60)):
+					document.f1.t3.value="Vänster arm";
+					//Vänster arm
+					break;
+				case ((hitnum >= 61) && (hitnum <= 90)):
+					document.f1.t3.value="Höger arm";
+					//Höger arm
+					break;
+				case ((hitnum >= 91) && (hitnum <= 100)):
+					document.f1.t3.value="Bröstkorg";
+					//Bröstkorg
+					break;
+			}
 			break;
+		case "lowhugg":
+			switch (true)
+			{
+
+			}
+			break;
+
 	}
 }
 function totaldmg(hitnum,redu_dmg){
@@ -44,12 +108,15 @@ function totaldmg(hitnum,redu_dmg){
 	var pain=0;
 	var bloodloss=0;
 
-	switch (hitnum)
+	if ((hitnum >= 1) && (hitnum <= 9))
 	{
-	case ((hitnum >= 1) && (hitnum <= 9))
 		//no extra dmg
-	break;
 	}
+	else
+	{
+		//Extra dmg
+	}
+	
 }
 	</script>
   </head>
@@ -58,14 +125,19 @@ function totaldmg(hitnum,redu_dmg){
 <!-- <input type=text name=t1 value="">
 <input name=b1 type=button value='1T6' onClick='t6()';> -->
 <input type=text name=t2 value="" size=3>
-<input name=b1 type=button value='1T100' onClick='t100()';>
+<input name=b1 type=button value='1T100' onClick='t100();find_hit(document.f1.hit.value,document.f1.t2.value,document.f1.dmgtype.value)';>
 <input type="checkbox" name="check1" value="malpunkt" /> Målpunkter<br>
+<select name=dmgtype onChange='' value=huggkross>
+	<option value=hugg>Hugg</option>
+	<option value=kross>Kross</option>
+	<option value=stick>Stick</option>
+</select>
 <select name=target onChange='' value=humanoid>
   <option value=humanoid>Humanoid</option>
   <option value=rider>Ryttare</option>
   <option value=fourleg>Fyrbent djur</option>
 </select>
-<select name=hit onChange='find_hit((this.options[this.selectedIndex].value),document.f1.t2.value);'>
+<select name=hit onChange='find_hit((this.options[this.selectedIndex].value),document.f1.t2.value,document.f1.dmgtype.value);'>
   <option value=normal>Normal</option>
   <option value=high>Högt</option>
   <option value=low>Lågt</option>
@@ -76,8 +148,8 @@ Träff:
 <br>
 Reducerad skadeverkan:
 <form name=f2>
-<input type=number name=t1>
-<input name=b1 type=button value="OK">
+	<input type=number name=t1 value=0> 
+	<input name=b1 type=button value="OK">
 </form>
   </body>
 </html> 

@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<!--
+	EON Damage-calcuation tool
+	Written by Niklas Myrefelt <niklas.myrefelt@gmail.com>
+-->
+
+
+<html>  
+  <head>
+    <title>EON3 Skade-generator</title>
+	<script type="text/javascript"> 
+
+function t6(){
+	var my_num=Math.random();
+	my_num=Math.floor(my_num*6+1);
+	document.f1.t1.value=my_num;	
+	return my_num;
+}
+
+function t100(){
+        var my_num=Math.random();
+        my_num=Math.floor(my_num*100+1);
+        document.f1.t2.value=my_num;    
+	return my_num;
+}
+
+function find_hit(hitsel,hitnum){
+	var high_target=["Ansikte [1]"];
+	var normal_target=["Ansikte [1]","Ansikte [1]","Hals [3]"];
+
+	document.f1.t3.value=hitsel;
+	switch (hitsel)
+	{
+		case "normal":
+			document.f1.t3.value=normal_target[hitnum-1];
+			break;
+		case "high":
+			document.f1.t3.value=high_target[hitnum-1];
+			break;
+	}
+
+
+}
+	</script>
+  </head>
+  <body>
+<form name=f1>
+<!-- <input type=text name=t1 value="">
+<input name=b1 type=button value='1T6' onClick='t6()';> -->
+<input type=text name=t2 value="" size=3>
+<input name=b1 type=button value='1T100' onClick='t100()';>
+<input type="checkbox" name="check1" value="malpunkt" /> Målpunkter<br>
+<select name=target onChange='' value=humanoid>
+  <option value=humanoid>Humanoid</option>
+  <option value=rider>Ryttare</option>
+  <option value=fourleg>Fyrbent djur</option>
+</select>
+<select name=hit onChange='find_hit((this.options[this.selectedIndex].value),document.f1.t2.value);'>
+  <option value=normal>Normal</option>
+  <option value=high>Högt</option>
+  <option value=low>Lågt</option>
+</select>
+Träff:
+<input type=text name=t3 value="" disabled>
+</form>
+  </body>
+</html> 
+

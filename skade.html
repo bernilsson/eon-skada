@@ -40,6 +40,10 @@ function find_hit(hitsel,hitnum){
 	}
 }
 function totaldmg(hitnum,redu_dmg){
+	var trauma=0;
+	var pain=0;
+	var bloodloss=0;
+
 	switch (hitnum)
 	{
 	case ((hitnum >= 1) && (hitnum <= 9))

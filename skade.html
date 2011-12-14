@@ -247,7 +247,8 @@ function totaldmg(delomr,dmgtype,redudmg){
 						break;
 				}
 				//no extra dmg
-				
+				if (redudmg > 9) //Extra-skador!
+				{
 					if (document.f1.check1.checked)
 					{
 					traff=t6();
@@ -271,15 +272,25 @@ function totaldmg(delomr,dmgtype,redudmg){
 						{
 						trauma=trauma+Math.floor(redudmg*2);
 						pain=pain+Math.floor(redudmg*1);
-						bleed=bleed+Math.floor(redudmg/2);
+						bleed=bleed+Math.floor(redudmg*0);
 						misc=traff.toString()+"Hjärna: Amp, Fast, Men";
 						}
 						break;
 					case 2: //Öga
+						if (dmgtype == "hugg")
+						{
 						trauma=trauma+Math.floor(redudmg/2);
 						pain=pain+Math.floor(redudmg*1);
 						bleed=bleed+Math.floor(redudmg/10);
 						misc=traff.toString()+"Öga: Amp, Men, Ärr"
+						}
+						else if (dmgtype == "kross")
+						{
+						trauma=trauma+Math.floor(redudmg/2);
+						pain=pain+Math.floor(redudmg*1);
+						bleed=bleed+Math.floor(redudmg*0);
+						misc=traff.toString()+"Hjärna: Amp, Fast, Men";
+						}
 						break;
 					case 3: //Käke || mun
 						trauma=trauma+Math.floor(redudmg/2);
@@ -330,6 +341,7 @@ function totaldmg(delomr,dmgtype,redudmg){
 						misc=traff.toString()+"Kött:";
 						break;
 				}
+			}
 				//document.f2.txtarea.value=document.f2.txtarea.value+"\nT+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
 			//Extra dmg
 			
@@ -337,6 +349,43 @@ function totaldmg(delomr,dmgtype,redudmg){
 	}
 	//document.f2.txtarea.value=document.f2.txtarea.value+"T+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
 	document.f2.txtarea.value = "T+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
+}
+
+function fuling(malomr){
+//document.f1.t3.value
+if (malomr.match("Ansikte"))
+{
+return "ansikte";
+}
+if (malomr.match("Skalle"))
+{
+return "skalle";
+}
+if (malomr.match("Hals"))
+{
+return "hals";
+}
+if (malomr.match("Arm"))
+{
+return "arm";
+}
+if (malomr.match("Bröstkorg"))
+{
+return "bröstkorg";
+}
+if (malomr.match("Mage"))
+{
+return "mage";
+}
+if (malomr.match("Underliv"))
+{
+return "underliv";
+}
+if (malomr.match("Ben"))
+{
+return "ben";
+}
+//return;
 }
 
 	</script>
@@ -347,7 +396,7 @@ function totaldmg(delomr,dmgtype,redudmg){
 <input name=b1 type=button value='1T6' onClick='t6()';> -->
 <input type=text name=t2 value="" size=3>
 <input name=b1 type=button value='1T100' onClick='t100();find_hit(document.f1.hit.value,document.f1.t2.value,document.f1.dmgtype.value)';>
-<input type="checkbox" name=check1 !checked/> <strike>Målpunkter</strike><br>
+<input type="checkbox" name=check1 !checked/>Målpunkter<br>
 <select name=dmgtype onChange=''>
 	<option value=hugg>Hugg</option>
 	<option value=kross>Kross</option>
@@ -369,8 +418,8 @@ Träff:
 <br>
 Reducerad skadeverkan:
 <form name=f2>
-	<input type=number name=redudmg value=0 onChange='totaldmg("ansikte",document.f1.dmgtype.value,document.f2.redudmg.value);'> 
-	<input name=b1 type=button value="OK" onClick='totaldmg("ansikte",document.f1.dmgtype.value,document.f2.redudmg.value);'><br>
+	<input type=number name=redudmg value=0 onChange='totaldmg(fuling(document.f1.t3.value),document.f1.dmgtype.value,document.f2.redudmg.value);'> 
+	<input name=b1 type=button value="OK" onClick='totaldmg(fuling(document.f1.t3.value),document.f1.dmgtype.value,document.f2.redudmg.value);'><br>
 	<style type="text/css">
 	textarea {
     resize: none;

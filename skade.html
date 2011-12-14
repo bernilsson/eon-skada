@@ -226,7 +226,7 @@ function totaldmg(delomr,redudmg,dmgtype){
 	var trauma=0;
 	var pain=0;
 	var bleed=0;
-	var misc;
+	var misc="";
 	switch (delomr)
 	{
 		case "ansikte":
@@ -253,7 +253,7 @@ function totaldmg(delomr,redudmg,dmgtype){
 			}
 		break;
 	}
-	document.f2.txtarea.value = "T+" + trauma + "<br>S+" + pain + "<br>B+" + bleed + "<br>" + misc
+	document.f2.txtarea.value = "T+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
 }
 
 	</script>

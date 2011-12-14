@@ -227,20 +227,23 @@ function totaldmg(delomr,redudmg,dmgtype){
 	var pain=0;
 	var bleed=0;
 	var misc="";
+	document.f2.txtarea.value=delomr+","+redudmg+","+dmgtype;
 	switch (delomr)
 	{
 		case "ansikte":
 			if ((redudmg >= 1) && (redudmg <= 9))
 			{
+				document.f2.txtarea.value=delomr+","+redudmg+","+dmgtype;
 				switch (dmgtype)
 				{
 					case "hugg":
+//						document.f2.txtarea.value=delomr+","+redudmg+","+dmgtype;
 						trauma=1;
 						pain=3;
-						bleed=1
+						bleed=1;
 						break;
 					case "kross":
-						trauma=0
+						trauma=0;
 						pain=4;
 						bleed=0;
 						break;
@@ -253,7 +256,8 @@ function totaldmg(delomr,redudmg,dmgtype){
 			}
 		break;
 	}
-	document.f2.txtarea.value = "T+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
+//	document.f2.txtarea.value=document.f2.txtarea.value+"\nT+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
+	//document.f2.txtarea.value = "T+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
 }
 
 	</script>
@@ -286,8 +290,8 @@ Träff:
 <br>
 Reducerad skadeverkan:
 <form name=f2>
-	<input type=number name=t1 value=0> 
-	<input name=b1 type=button value="OK" onClick='totaldmg();'><br>
+	<input type=number name=redudmg value=0> 
+	<input name=b1 type=button value="OK" onClick='totaldmg("ansikte",document.f1.dmgtype.value,document.f2.redudmg.value);'><br>
 	<style type="text/css">
 	textarea {
     resize: none;

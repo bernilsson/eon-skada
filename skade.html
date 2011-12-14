@@ -15,14 +15,12 @@
 function t6(){
 	var my_num=Math.random();
 	my_num=Math.floor(my_num*6+1);
-	document.f1.t1.value=my_num;	
 	return my_num;
 }
 
 function t10(){
         var my_num=Math.random();
         my_num=Math.floor(my_num*10+1);
-        document.f1.t2.value=my_num;    
 	return my_num;
 }
 
@@ -222,18 +220,18 @@ function find_hit(hitsel,hitnum,dmgtype){
 	}
 }
 
-function totaldmg(delomr,redudmg,dmgtype){
+function totaldmg(delomr,dmgtype,redudmg){
 	var trauma=0;
 	var pain=0;
 	var bleed=0;
 	var misc="";
-	document.f2.txtarea.value=delomr+","+redudmg+","+dmgtype;
+	//document.f2.txtarea.value=delomr+","+redudmg+","+dmgtype;
+	document.f2.txtarea.value=""
+
 	switch (delomr)
 	{
 		case "ansikte":
-			if ((redudmg >= 1) && (redudmg <= 9))
-			{
-				document.f2.txtarea.value=delomr+","+redudmg+","+dmgtype;
+			//document.f2.txtarea.value=delomr+","+redudmg+","+dmgtype;
 				switch (dmgtype)
 				{
 					case "hugg":
@@ -249,15 +247,96 @@ function totaldmg(delomr,redudmg,dmgtype){
 						break;
 				}
 				//no extra dmg
-			}
-			else
-			{
+				
+					if (document.f1.check1.checked)
+					{
+					traff=t6();
+					}
+					else
+					{
+					traff=t10();
+					}
+				//document.f2.txtarea.value=document.f2.txtarea.value+"\nträff: "+traff.toString();
+				switch (traff)
+				{
+					case 1: //Hjärna
+						if (dmgtype == "hugg")
+						{
+						trauma=trauma+Math.floor(redudmg*2);
+						pain=pain+Math.floor(redudmg*1);
+						bleed=bleed+Math.floor(redudmg/2);
+						misc=traff.toString()+"Hjärna: Amp, Fast, Men";
+						}
+						else if (dmgtype == "kross")
+						{
+						trauma=trauma+Math.floor(redudmg*2);
+						pain=pain+Math.floor(redudmg*1);
+						bleed=bleed+Math.floor(redudmg/2);
+						misc=traff.toString()+"Hjärna: Amp, Fast, Men";
+						}
+						break;
+					case 2: //Öga
+						trauma=trauma+Math.floor(redudmg/2);
+						pain=pain+Math.floor(redudmg*1);
+						bleed=bleed+Math.floor(redudmg/10);
+						misc=traff.toString()+"Öga: Amp, Men, Ärr"
+						break;
+					case 3: //Käke || mun
+						trauma=trauma+Math.floor(redudmg/2);
+						pain=pain+Math.floor(redudmg/2);
+						bleed=bleed+Math.floor(redudmg/10);
+						misc=traff.toString()+"Käke: Amp, Men, Ärr"
+						break;
+					case 4:
+						trauma=trauma+Math.floor(redudmg/10);
+						pain=pain+Math.floor(redudmg/2);
+						bleed=bleed+Math.floor(redudmg/10);
+						misc=traff.toString()+"Öra: Amp, Men, Ärr";
+						break;
+					case 5: 
+						trauma=trauma+Math.floor(redudmg/10);
+						pain=pain+Math.floor(redudmg/2);
+						bleed=bleed+Math.floor(redudmg/10);
+						misc=traff.toString()+"Näsa: Amp, Bryt, Ärr";
+						break;
+					case 6:
+						trauma=trauma+Math.floor(redudmg/10);
+						pain=pain+Math.floor(redudmg*1);
+						bleed=bleed+Math.floor(redudmg/10);
+						misc=traff.toString()+"Omtöckning: Amp, Faller, Tappar";
+						break;
+					case 7:
+						trauma=trauma+Math.floor(redudmg/10);
+						pain=pain+Math.floor(redudmg/10);
+						bleed=bleed+Math.floor(redudmg/2);
+						misc=traff.toString()+"Blödning: Amp";
+						break;
+					case 8:
+						trauma=trauma+Math.floor(redudmg/10);
+						pain=pain+Math.floor(redudmg/10);
+						bleed=bleed+Math.floor(redudmg/10);
+						misc=traff.toString()+"Kött: Amp, Ärr";
+						break;
+					case 9:
+						trauma=trauma+Math.floor(redudmg/10);
+						pain=pain+Math.floor(redudmg/10);
+						bleed=bleed+Math.floor(redudmg/10);
+						misc=traff.toString()+"Kött: Amp";
+						break;
+					case 10:
+						trauma=trauma+Math.floor(redudmg/10);
+						pain=pain+Math.floor(redudmg/10);
+						bleed=bleed+Math.floor(redudmg/10);
+						misc=traff.toString()+"Kött:";
+						break;
+				}
+				//document.f2.txtarea.value=document.f2.txtarea.value+"\nT+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
 			//Extra dmg
-			}
+			
 		break;
 	}
-//	document.f2.txtarea.value=document.f2.txtarea.value+"\nT+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
-	//document.f2.txtarea.value = "T+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
+	//document.f2.txtarea.value=document.f2.txtarea.value+"T+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
+	document.f2.txtarea.value = "T+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
 }
 
 	</script>
@@ -268,8 +347,8 @@ function totaldmg(delomr,redudmg,dmgtype){
 <input name=b1 type=button value='1T6' onClick='t6()';> -->
 <input type=text name=t2 value="" size=3>
 <input name=b1 type=button value='1T100' onClick='t100();find_hit(document.f1.hit.value,document.f1.t2.value,document.f1.dmgtype.value)';>
-<input type="checkbox" name="check1" value="malpunkt" disabled /> <strike>Målpunkter</strike><br>
-<select name=dmgtype onChange='' value=huggkross>
+<input type="checkbox" name=check1 !checked/> <strike>Målpunkter</strike><br>
+<select name=dmgtype onChange=''>
 	<option value=hugg>Hugg</option>
 	<option value=kross>Kross</option>
 	<option value=stick>Stick</option>
@@ -290,14 +369,14 @@ Träff:
 <br>
 Reducerad skadeverkan:
 <form name=f2>
-	<input type=number name=redudmg value=0> 
+	<input type=number name=redudmg value=0 onChange='totaldmg("ansikte",document.f1.dmgtype.value,document.f2.redudmg.value);'> 
 	<input name=b1 type=button value="OK" onClick='totaldmg("ansikte",document.f1.dmgtype.value,document.f2.redudmg.value);'><br>
 	<style type="text/css">
 	textarea {
     resize: none;
 }
 </style>
-<textarea name=txtarea rows="4" cols="22">
+<textarea name=txtarea rows="7" cols="22">
 T+
 S+
 B+

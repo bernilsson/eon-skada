@@ -39,7 +39,7 @@ function find_hit(hitsel,hitnum,dmgtype){
 
 	switch (hitsel+dmgtype)
 	{
-	case "normalhugg":
+	case "normalhugg": case "normalkross":
 
 		       	//document.f1.t3.value=hitsel+dmgtype;
 			switch (true) //Träfftabell för normalt hugg-slag:
@@ -179,7 +179,7 @@ function find_hit(hitsel,hitnum,dmgtype){
 
 
 
-		case "highhugg" || "highkross":
+		case "highhugg": case "highkross":
 			switch (true) //Träfftabell för högt hugg-slag
 			{
 				case ((hitnum >= 1) && (hitnum <= 30)):
@@ -200,7 +200,7 @@ function find_hit(hitsel,hitnum,dmgtype){
 					break;
 			}
 			break;
-		case "lowhugg" || "lowkross":
+		case "lowhugg": case "lowkross":
 			switch (true)
 			{
 				case ((hitnum >= 1) && (hitnum <= 20)):

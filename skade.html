@@ -374,87 +374,88 @@ function totaldmg(delomr,dmgtype,redudmg){
 					{
 					traff=t10();
 					}
+				
 				//document.f2.txtarea.value=document.f2.txtarea.value+"\nträff: "+traff.toString();
 				switch (traff) //Extra-skador SKALLE
 				{
 					case 1: //Hjärna
 						if (dmgtype == "hugg")
 						{
-						trauma=trauma+Math.floor(redudmg*2);
-						pain=pain+Math.floor(redudmg*1);
-						bleed=bleed+Math.floor(redudmg/2);
+						trauma=Math.floor(redudmg*2);
+						pain=Math.floor(redudmg*1);
+						bleed=Math.floor(redudmg/2);
 						misc=traff.toString()+"Hjärna: Amp, Fast, Men";
 						}
 						else if (dmgtype == "kross")
 						{
-						trauma=trauma+Math.floor(redudmg*2);
-						pain=pain+Math.floor(redudmg*1);
-						bleed=bleed+Math.floor(redudmg*0);
+						trauma=Math.floor(redudmg*2);
+						pain=Math.floor(redudmg*1);
+						bleed=Math.floor(redudmg*0);
 						misc=traff.toString()+"Hjärna: Faller, Men";
 						}
 						break;
 					case 2: //Hjärna
 						if (dmgtype == "hugg")
 						{
-						trauma=trauma+Math.floor(redudmg/2);
-						pain=pain+Math.floor(redudmg*1);
-						bleed=bleed+Math.floor(redudmg/2);
+						trauma=Math.floor(redudmg/2);
+						pain=Math.floor(redudmg*1);
+						bleed=Math.floor(redudmg/2);
 						misc=traff.toString()+"Hjärna: Amp, Men"
 						}
 						else if (dmgtype == "kross")
 						{
-						trauma=trauma+Math.floor(redudmg*2);
-						pain=pain+Math.floor(redudmg*1);
-						bleed=bleed+Math.floor(redudmg*0);
+						trauma=Math.floor(redudmg*2);
+						pain=Math.floor(redudmg*1);
+						bleed=Math.floor(redudmg*0);
 						misc=traff.toString()+"Hjärna: Men";
 						}
 						break;
 					case 3: //Skallben
-						trauma=trauma+Math.floor(redudmg/2);
-						pain=pain+Math.floor(redudmg/2);
-						bleed=bleed+Math.floor(redudmg/10);
+						trauma=Math.floor(redudmg/2);
+						pain=Math.floor(redudmg/2);
+						bleed=Math.floor(redudmg/10);
 						misc=traff.toString()+"Skallben: Amp, Bryt, Fast, Ärr"
 						break;
 					case 4: //Skallben
-						trauma=trauma+Math.floor(redudmg/10);
-						pain=pain+Math.floor(redudmg/2);
-						bleed=bleed+Math.floor(redudmg/10);
+						trauma=Math.floor(redudmg/10);
+						pain=Math.floor(redudmg/2);
+						bleed=Math.floor(redudmg/10);
 						misc=traff.toString()+"Skallben: Amp, Bryt, Fast";
 						break;
 					case 5: //Skallben
-						trauma=trauma+Math.floor(redudmg/10);
-						pain=pain+Math.floor(redudmg/2);
-						bleed=bleed+Math.floor(redudmg/10);
+						trauma=Math.floor(redudmg/10);
+						pain=Math.floor(redudmg/2);
+						bleed=Math.floor(redudmg/10);
 						misc=traff.toString()+"Skallben: Amp, Bryt";
 						break;
 					case 6: //Omtöckning
-						trauma=trauma+Math.floor(redudmg/10);
-						pain=pain+Math.floor(redudmg*1);
-						bleed=bleed+Math.floor(redudmg/10);
+						trauma=Math.floor(redudmg/10);
+						pain=Math.floor(redudmg*1);
+						bleed=Math.floor(redudmg/10);
 						misc=traff.toString()+"Omtöckning: Amp, Faller, Tappar";
 						break;
 					case 7: //Omtöckning
-						trauma=trauma+Math.floor(redudmg/10);
-						pain=pain+Math.floor(redudmg*1);
-						bleed=bleed+Math.floor(redudmg/10);
+						trauma=Math.floor(redudmg/10);
+						pain=Math.floor(redudmg*1);
+						bleed=Math.floor(redudmg/10);
 						misc=traff.toString()+"Blödning: Amp, Tappar";
 						break;
 					case 8: //Blödning
-						trauma=trauma+Math.floor(redudmg/10);
-						pain=pain+Math.floor(redudmg/10);
-						bleed=bleed+Math.floor(redudmg/2);
+						trauma=Math.floor(redudmg/10);
+						pain=Math.floor(redudmg/10);
+						bleed=Math.floor(redudmg/2);
 						misc=traff.toString()+"Kött: Amp";
 						break;
 					case 9: //Köttsår
-						trauma=trauma+Math.floor(redudmg/10);
-						pain=pain+Math.floor(redudmg/10);
-						bleed=bleed+Math.floor(redudmg/10);
+						trauma=Math.floor(redudmg/10);
+						pain=Math.floor(redudmg/10);
+						bleed=Math.floor(redudmg/10);
 						misc=traff.toString()+"Kött: Amp, Ärr";
 						break;
 					case 10: //Köttsår
-						trauma=trauma+Math.floor(redudmg/10);
-						pain=pain+Math.floor(redudmg/10);
-						bleed=bleed+Math.floor(redudmg/10);
+						trauma=Math.floor(redudmg/10);
+						pain=Math.floor(redudmg/10);
+						bleed=Math.floor(redudmg/10);
 						misc=traff.toString()+"Kött:";
 						break;
 				}

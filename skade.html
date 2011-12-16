@@ -180,7 +180,7 @@ function find_hit(hitsel,hitnum,dmgtype){
 		case "highhugg": case "highkross":
 			switch (true) //Träfftabell för högt hugg-slag
 			{
-				case ((hitnum >= 1) && (hitnum <= 30)) //Huvud
+				case ((hitnum >= 1) && (hitnum <= 30)): //Huvud
 					if ((hitnum >= 1) && (hitnum <= 12))
                                         {
                                                 document.f1.t3.value="Huvud - Ansikte [1]";
@@ -252,17 +252,61 @@ function find_hit(hitsel,hitnum,dmgtype){
 		case "lowhugg": case "lowkross":
 			switch (true)
 			{
-				case ((hitnum >= 1) && (hitnum <= 20)):
-					document.f1.t3.value="Buk";
-					//Buk
+				case ((hitnum >= 1) && (hitnum <= 20)):  //Buk
+                                        if ((hitnum >= 1) && (hitnum <= 16))
+                                        {
+                                                document.f1.t3.value="Buk - Mage [15]";
+                                        }
+                                        else if ((hitnum >= 17) && (hitnum <= 20))
+                                        {
+                                                document.f1.t3.value="Buk - Underliv [16]";
+                                        }
+
 					break;
-				case ((hitnum >= 21) && (hitnum <= 60)):
-					document.f1.t3.value="Vänster ben";
-					//Vänster ben
+				case ((hitnum >= 21) && (hitnum <= 60)): //Vänster Ben
+                                        if ((hitnum >= 21) && (hitnum <= 28))
+                                        {
+                                                document.f1.t3.value="Vänster ben - Höft [17]";
+                                        }       
+                                        else if ((hitnum >= 29) && (hitnum <= 36))
+                                        {
+                                                document.f1.t3.value="Vänster ben - Lår [19]";
+                                        }
+                                        else if ((hitnum >= 37) && (hitnum <= 44))
+                                        {
+                                                document.f1.t3.value="Vänster ben - Knä [21]";
+                                        }
+                                        else if ((hitnum >= 45) && (hitnum <= 56))
+                                        {
+                                                document.f1.t3.value="Vänster ben - Vad [23]";
+                                        }
+                                        else if ((hitnum == 57) && (hitnum <= 60))
+                                        {
+                                                document.f1.t3.value="Vänster ben - Fot [25]";
+                                        } 
 					break;
-				case ((hitnum >= 61) && (hitnum <= 100)):
-					document.f1.t3.value="Höger ben";
-					//Höger ben 
+				case ((hitnum >= 61) && (hitnum <= 100)): //Höger ben
+                                        //document.f1.t3.value="Höger ben";
+                                        if ((hitnum >= 61) && (hitnum <= 68))
+                                        {
+                                                document.f1.t3.value="Höger ben - Höft [18]";
+                                        }
+                                        if ((hitnum >= 69) && (hitnum <= 76))
+                                        {
+                                                document.f1.t3.value="Höger ben - Lår [20]";
+                                        }
+                                        if ((hitnum >= 77) && (hitnum <= 84))
+                                        {
+                                                document.f1.t3.value="Höger ben - Knä [22]";
+                                        }
+                                        if ((hitnum >= 85) && (hitnum <= 96))
+                                        {
+                                                document.f1.t3.value="Höger ben - Vad [24]";
+                                        }
+                                        if ((hitnum >= 97) && (hitnum <= 100))
+                                        {
+                                                document.f1.t3.value="Höger ben - Fot [26]";
+                                        }
 					break;
 
 			}
@@ -573,7 +617,8 @@ return "ben";
 </select>
 <select name=target onChange='' value=humanoid>
   <option value=humanoid>Humanoid</option>
-  <option value=rider>Ryttare</option>
+  <option value=rider>Mot ryttare</option>
+  <option value=mount>Mot ryttare</option>
   <option value=fourleg>Fyrbent djur</option>
 </select>
 <select name=hit onChange='find_hit((this.options[this.selectedIndex].value),document.f1.t2.value,document.f1.dmgtype.value);'>

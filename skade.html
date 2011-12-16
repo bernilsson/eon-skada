@@ -180,20 +180,71 @@ function find_hit(hitsel,hitnum,dmgtype){
 		case "highhugg": case "highkross":
 			switch (true) //Träfftabell för högt hugg-slag
 			{
-				case ((hitnum >= 1) && (hitnum <= 30)):
-					document.f1.t3.value="Huvud";
-					//huvud
+				case ((hitnum >= 1) && (hitnum <= 30)) //Huvud
+					if ((hitnum >= 1) && (hitnum <= 12))
+                                        {
+                                                document.f1.t3.value="Huvud - Ansikte [1]";
+                                        }
+					
+					if ((hitnum >= 13) && (hitnum <= 24))
+                                        {
+                                                document.f1.t3.value="Huvud - Skalle [2]";
+                                        }
+					if ((hitnum >= 25) && (hitnum <= 30))
+                                        {
+                                                document.f1.t3.value="Huvud - Hals [3]";
+                                        }
 					break;
-				case ((hitnum >= 31) && (hitnum <= 60)):
-					document.f1.t3.value="Vänster arm";
-					//Vänster arm
+				case ((hitnum >= 31) && (hitnum <= 60)): //Vänster arm
+					//document.f1.t3.value="Vänster arm";
+
+                                        if ((hitnum >= 31) && (hitnum <= 36))
+                                        {
+                                                document.f1.t3.value="Vänster arm - Skuldra [4]";
+                                        }
+                                        else if ((hitnum >= 37) && (hitnum <= 42))
+                                        {
+                                                document.f1.t3.value="Vänster arm - Överarm [6]";
+                                        }
+                                        else if ((hitnum >= 43) && (hitnum <= 45))
+                                        {
+                                                document.f1.t3.value="Vänster arm - Armbåge [8]";
+                                        }
+                                        else if ((hitnum >= 46) && (hitnum <= 54))
+                                        {
+                                                document.f1.t3.value="Vänster arm - Underarm [10]";
+                                        }
+                                        else if ((hitnum >= 55) && (hitnum <= 60))
+                                        {
+                                                document.f1.t3.value="Vänster arm - Hand [12]";
+                                        }
+
 					break;
-				case ((hitnum >= 61) && (hitnum <= 90)):
-					document.f1.t3.value="Höger arm";
-					//Höger arm
+				case ((hitnum >= 61) && (hitnum <= 90)): //Höger arm
+
+                                        if ((hitnum >= 61) && (hitnum <= 66))
+                                        {
+                                                document.f1.t3.value="Höger arm - Skuldra [5]";
+                                        }
+                                        else if ((hitnum >= 67) && (hitnum <= 72))
+                                        {
+                                                document.f1.t3.value="Höger arm - Överarm [7]";
+                                        }
+                                        else if ((hitnum >= 73) && (hitnum <= 75))
+                                        {
+                                                document.f1.t3.value="Höger arm - Armbåge [9]";
+                                        }
+                                        else if ((hitnum >= 76) && (hitnum <= 84))
+                                        {
+                                                document.f1.t3.value="Höger arm - Underarm [11]";
+                                        }
+                                        else if ((hitnum >= 85) && (hitnum <= 90))
+                                        {
+                                                document.f1.t3.value="Höger arm - Hand [13]";
+                                        }
 					break;
 				case ((hitnum >= 91) && (hitnum <= 100)):
-					document.f1.t3.value="Bröstkorg";
+					document.f1.t3.value="Bröstkorg [14]";
 					//Bröstkorg
 					break;
 			}

@@ -10,7 +10,11 @@
 <html>  
   <head>
     <title>EON3 Skade-generator</title>
+	<script type="text/javascript" src="find_hit.js"></script>
+	<script type="text/javascript" src="hugg_skada.js"></script>
+	<!--<script type="text/javascript" src="totaldmg.js"></script> -->
 	<script type="text/javascript"> 
+	
 
 function t6(){
 	var my_num=Math.random();
@@ -31,660 +35,56 @@ function t100(){
 	return my_num;
 }
 
-function find_hit(hitsel,hitnum,dmgtype){
-
-//	document.f1.t3.value=hitsel+dmgtype;
-
-	switch (hitsel+dmgtype)
-	{
-	case "normalhugg": case "normalkross":
-
-		       	//document.f1.t3.value=hitsel+dmgtype;
-			switch (true) //Träfftabell för normalt hugg-slag:
-			{
-				case ((hitnum >= 1) && (hitnum <= 20)):
-					//Huvud
-					if ((hitnum >= 1) && (hitnum <=8))
-					{
-						document.f1.t3.value="Huvud - Ansikte [1]";
-					}
-					else if ((hitnum >= 9) && (hitnum <=16))
-					{
-						document.f1.t3.value="Huvud - Skalle [2]";
-					}
-					else if ((hitnum >= 17) && (hitnum <=20))
-					{
-						document.f1.t3.value="Huvud - Hals [3]";
-					}
-					break;
-				case ((hitnum >= 21) && (hitnum <= 40)):
-					document.f1.t3.value="Vänster arm";
-					if ((hitnum >= 21) && (hitnum <=24))
-					{
-						document.f1.t3.value="Vänster arm - Skuldra [4]";
-					}
-					else if ((hitnum >= 25) && (hitnum <=28))
-					{
-						document.f1.t3.value="Vänster arm - Överarm [6]";
-					}
-					else if ((hitnum >= 29) && (hitnum <= 30))
-					{
-						document.f1.t3.value="Vänster arm - Armbåge [8]";
-					}
-					else if ((hitnum >= 31) && (hitnum <= 36))
-					{
-						document.f1.t3.value="Vänster arm - Underarm [10]";
-					}
-					else if ((hitnum >= 37) && (hitnum <= 40))
-					{
-						document.f1.t3.value="Vänster arm - Hand [12]";
-					}
-					//Vänster arm
-					break;
-				case ((hitnum >= 41) && (hitnum <= 60)):
-					document.f1.t3.value="Höger arm";
-					if ((hitnum >= 41) && (hitnum <= 44))
-					{
-						document.f1.t3.value="Höger arm - Skuldra [5]";
-					}
-					else if ((hitnum >= 45) && (hitnum <= 48))
-					{
-						document.f1.t3.value="Höger arm - Överarm [7]";
-					}
-					else if ((hitnum >= 49) && (hitnum <= 50))
-					{
-						document.f1.t3.value="Höger arm - Armbåge [9]";
-					}
-					else if ((hitnum >= 51) && (hitnum <= 56))
-					{
-						document.f1.t3.value="Höger arm - Underarm [11]";
-					}
-					else if ((hitnum >= 57) && (hitnum <= 60))
-					{
-						document.f1.t3.value="Höger arm - Hand [13]";
-					}
-					//Höger arm
-					break;
-				case ((hitnum >= 61) && (hitnum <= 70)):
-					document.f1.t3.value="Bröstkorg [14]";
-					//Bröstkorg
-					break;
-				case ((hitnum >= 71) && (hitnum <= 80)):
-					document.f1.t3.value="Buk";
-					if ((hitnum >= 71) && (hitnum <= 78))
-					{
-						document.f1.t3.value="Buk - Mage [15]";
-					}
-					else if ((hitnum >= 79) && (hitnum <= 80))
-					{
-						document.f1.t3.value="Buk - Underliv [16]";
-					}
-					//Buk
-					break;
-
-				case ((hitnum >= 81) && (hitnum <= 90)):
-					document.f1.t3.value="Vänster ben";
-					if ((hitnum >= 81) && (hitnum <= 82))
-					{
-						document.f1.t3.value="Vänster ben - Höft [17]";
-					}	
-					else if ((hitnum >= 83) && (hitnum <= 84))
-					{
-						document.f1.t3.value="Vänster ben - Lår [19]";
-					}
-					else if ((hitnum >= 85) && (hitnum <= 86))
-					{
-						document.f1.t3.value="Vänster ben - Knä [21]";
-					}
-					else if ((hitnum >= 87) && (hitnum <= 89))
-					{
-						document.f1.t3.value="Vänster ben - Vad [23]";
-					}
-					else if (hitnum == 90)
-					{
-						document.f1.t3.value="Vänster ben - Fot [25]";
-					} 
-					//Vänster ben
-					break;
-
-				case ((hitnum >= 91) && (hitnum <= 100)):
-					document.f1.t3.value="Höger ben";
-					if ((hitnum >= 91) && (hitnum <= 92))
-					{
-						document.f1.t3.value="Höger ben - Höft [18]";
-					}
-					if ((hitnum >= 93) && (hitnum <= 94))
-					{
-						document.f1.t3.value="Höger ben - Lår [20]";
-					}
-					if ((hitnum >= 95) && (hitnum <= 96))
-					{
-						document.f1.t3.value="Höger ben - Knä [22]";
-					}
-					if ((hitnum >= 97) && (hitnum <= 99))
-					{
-						document.f1.t3.value="Höger ben - Vad [24]";
-					}
-					if (hitnum >= 100)
-					{
-						document.f1.t3.value="Höger ben - Fot [26]";
-					}
-					//Höger ben
-					break;
-
-			}
-			break;
-
-
-
-		case "highhugg": case "highkross":
-			switch (true) //Träfftabell för högt hugg-slag
-			{
-				case ((hitnum >= 1) && (hitnum <= 30)): //Huvud
-					if ((hitnum >= 1) && (hitnum <= 12))
-                                        {
-                                                document.f1.t3.value="Huvud - Ansikte [1]";
-                                        }
-					
-					if ((hitnum >= 13) && (hitnum <= 24))
-                                        {
-                                                document.f1.t3.value="Huvud - Skalle [2]";
-                                        }
-					if ((hitnum >= 25) && (hitnum <= 30))
-                                        {
-                                                document.f1.t3.value="Huvud - Hals [3]";
-                                        }
-					break;
-				case ((hitnum >= 31) && (hitnum <= 60)): //Vänster arm
-					//document.f1.t3.value="Vänster arm";
-
-                                        if ((hitnum >= 31) && (hitnum <= 36))
-                                        {
-                                                document.f1.t3.value="Vänster arm - Skuldra [4]";
-                                        }
-                                        else if ((hitnum >= 37) && (hitnum <= 42))
-                                        {
-                                                document.f1.t3.value="Vänster arm - Överarm [6]";
-                                        }
-                                        else if ((hitnum >= 43) && (hitnum <= 45))
-                                        {
-                                                document.f1.t3.value="Vänster arm - Armbåge [8]";
-                                        }
-                                        else if ((hitnum >= 46) && (hitnum <= 54))
-                                        {
-                                                document.f1.t3.value="Vänster arm - Underarm [10]";
-                                        }
-                                        else if ((hitnum >= 55) && (hitnum <= 60))
-                                        {
-                                                document.f1.t3.value="Vänster arm - Hand [12]";
-                                        }
-
-					break;
-				case ((hitnum >= 61) && (hitnum <= 90)): //Höger arm
-
-                                        if ((hitnum >= 61) && (hitnum <= 66))
-                                        {
-                                                document.f1.t3.value="Höger arm - Skuldra [5]";
-                                        }
-                                        else if ((hitnum >= 67) && (hitnum <= 72))
-                                        {
-                                                document.f1.t3.value="Höger arm - Överarm [7]";
-                                        }
-                                        else if ((hitnum >= 73) && (hitnum <= 75))
-                                        {
-                                                document.f1.t3.value="Höger arm - Armbåge [9]";
-                                        }
-                                        else if ((hitnum >= 76) && (hitnum <= 84))
-                                        {
-                                                document.f1.t3.value="Höger arm - Underarm [11]";
-                                        }
-                                        else if ((hitnum >= 85) && (hitnum <= 90))
-                                        {
-                                                document.f1.t3.value="Höger arm - Hand [13]";
-                                        }
-					break;
-				case ((hitnum >= 91) && (hitnum <= 100)):
-					document.f1.t3.value="Bröstkorg [14]";
-					//Bröstkorg
-					break;
-			}
-			break;
-		case "lowhugg": case "lowkross":
-			switch (true)
-			{
-				case ((hitnum >= 1) && (hitnum <= 20)):  //Buk
-                                        if ((hitnum >= 1) && (hitnum <= 16))
-                                        {
-                                                document.f1.t3.value="Buk - Mage [15]";
-                                        }
-                                        else if ((hitnum >= 17) && (hitnum <= 20))
-                                        {
-                                                document.f1.t3.value="Buk - Underliv [16]";
-                                        }
-
-					break;
-				case ((hitnum >= 21) && (hitnum <= 60)): //Vänster Ben
-                                        if ((hitnum >= 21) && (hitnum <= 28))
-                                        {
-                                                document.f1.t3.value="Vänster ben - Höft [17]";
-                                        }       
-                                        else if ((hitnum >= 29) && (hitnum <= 36))
-                                        {
-                                                document.f1.t3.value="Vänster ben - Lår [19]";
-                                        }
-                                        else if ((hitnum >= 37) && (hitnum <= 44))
-                                        {
-                                                document.f1.t3.value="Vänster ben - Knä [21]";
-                                        }
-                                        else if ((hitnum >= 45) && (hitnum <= 56))
-                                        {
-                                                document.f1.t3.value="Vänster ben - Vad [23]";
-                                        }
-                                        else if ((hitnum == 57) && (hitnum <= 60))
-                                        {
-                                                document.f1.t3.value="Vänster ben - Fot [25]";
-                                        } 
-					break;
-				case ((hitnum >= 61) && (hitnum <= 100)): //Höger ben
-                                        //document.f1.t3.value="Höger ben";
-                                        if ((hitnum >= 61) && (hitnum <= 68))
-                                        {
-                                                document.f1.t3.value="Höger ben - Höft [18]";
-                                        }
-                                        if ((hitnum >= 69) && (hitnum <= 76))
-                                        {
-                                                document.f1.t3.value="Höger ben - Lår [20]";
-                                        }
-                                        if ((hitnum >= 77) && (hitnum <= 84))
-                                        {
-                                                document.f1.t3.value="Höger ben - Knä [22]";
-                                        }
-                                        if ((hitnum >= 85) && (hitnum <= 96))
-                                        {
-                                                document.f1.t3.value="Höger ben - Vad [24]";
-                                        }
-                                        if ((hitnum >= 97) && (hitnum <= 100))
-                                        {
-                                                document.f1.t3.value="Höger ben - Fot [26]";
-                                        }
-					break;
-
-			}
-			break; 
-
-	}
-}
-
-function totaldmg(delomr,dmgtype,redudmg){
-	var trauma=0;
-	var pain=0;
-	var bleed=0;
-	var misc="";
-	//document.f2.txtarea.value=delomr+","+redudmg+","+dmgtype;
-	document.f2.txtarea.value=""
-
-	switch (delomr)
-	{
-		case "ansikte": //Extra-skador ANSIKTE
-				switch (dmgtype)
-				{
-					case "hugg":
-						trauma=1;
-						pain=3;
-						bleed=1;
-						break;
-					case "kross":
-						trauma=0;
-						pain=4;
-						bleed=0;
-						break;
-				}
-				//no extra dmg
-				if (redudmg > 9) //Extra-skador!
-				{
-					if (document.f1.check1.checked)
-					{
-					traff=t6();
-					}
-					else
-					{
-					traff=t10();
-					}
-				switch (traff)
-				{
-					case 1: //Hjärna
-						if (dmgtype == "hugg")
-						{
-						trauma=trauma+Math.floor(redudmg*2);
-						pain=pain+Math.floor(redudmg*1);
-						bleed=bleed+Math.floor(redudmg/2);
-						misc=traff.toString()+"Hjärna: Amp, Fast, Men";
-						}
-						else if (dmgtype == "kross")
-						{
-						trauma=trauma+Math.floor(redudmg*2);
-						pain=pain+Math.floor(redudmg*1);
-						bleed=bleed+Math.floor(redudmg*0);
-						misc=traff.toString()+"Hjärna: Men";
-						}
-						break;
-					case 2: //Öga
-						if (dmgtype == "hugg")
-						{
-						trauma=trauma+Math.floor(redudmg/2);
-						pain=pain+Math.floor(redudmg*1);
-						bleed=bleed+Math.floor(redudmg/10);
-						misc=traff.toString()+"Öga: Amp, Men, Ärr"
-						}
-						else if (dmgtype == "kross")
-						{
-						trauma=trauma+Math.floor(redudmg/2);
-						pain=pain+Math.floor(redudmg*1);
-						bleed=bleed+Math.floor(redudmg*0);
-						misc=traff.toString()+"Hjärna: Amp, Fast, Men";
-						}
-						break;
-					case 3: //Käke || mun
-						trauma=trauma+Math.floor(redudmg/2);
-						pain=pain+Math.floor(redudmg/2);
-						bleed=bleed+Math.floor(redudmg/10);
-						misc=traff.toString()+"Käke: Amp, Men, Ärr"
-						break;
-					case 4:
-						trauma=trauma+Math.floor(redudmg/10);
-						pain=pain+Math.floor(redudmg/2);
-						bleed=bleed+Math.floor(redudmg/10);
-						misc=traff.toString()+"Öra: Amp, Men, Ärr";
-						break;
-					case 5: 
-						trauma=trauma+Math.floor(redudmg/10);
-						pain=pain+Math.floor(redudmg/2);
-						bleed=bleed+Math.floor(redudmg/10);
-						misc=traff.toString()+"Näsa: Amp, Bryt, Ärr";
-						break;
-					case 6:
-						trauma=trauma+Math.floor(redudmg/10);
-						pain=pain+Math.floor(redudmg*1);
-						bleed=bleed+Math.floor(redudmg/10);
-						misc=traff.toString()+"Omtöckning: Amp, Faller, Tappar";
-						break;
-					case 7:
-						trauma=trauma+Math.floor(redudmg/10);
-						pain=pain+Math.floor(redudmg/10);
-						bleed=bleed+Math.floor(redudmg/2);
-						misc=traff.toString()+"Blödning: Amp";
-						break;
-					case 8:
-						trauma=trauma+Math.floor(redudmg/10);
-						pain=pain+Math.floor(redudmg/10);
-						bleed=bleed+Math.floor(redudmg/10);
-						misc=traff.toString()+"Kött: Amp, Ärr";
-						break;
-					case 9:
-						trauma=trauma+Math.floor(redudmg/10);
-						pain=pain+Math.floor(redudmg/10);
-						bleed=bleed+Math.floor(redudmg/10);
-						misc=traff.toString()+"Kött: Amp";
-						break;
-					case 10:
-						trauma=trauma+Math.floor(redudmg/10);
-						pain=pain+Math.floor(redudmg/10);
-						bleed=bleed+Math.floor(redudmg/10);
-						misc=traff.toString()+"Kött:";
-						break;
-				}
-			}
-				//document.f2.txtarea.value=document.f2.txtarea.value+"\nT+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
-			//Extra dmg
-			
-		break;
-		
-		case "skalle":
-			//document.f2.txtarea.value=delomr+","+redudmg+","+dmgtype;
-				switch (dmgtype)
-				{
-					case "hugg":
-//						document.f2.txtarea.value=delomr+","+redudmg+","+dmgtype;
-						trauma=1;
-						pain=2;
-						bleed=1;
-						break;
-					case "kross":
-						trauma=0;
-						pain=3;
-						bleed=0;
-						break;
-				}
-				//no extra dmg
-				if (redudmg > 9) //Extra-skador!
-				{
-					if (document.f1.check1.checked)
-					{
-					traff=t6();
-					}
-					else
-					{
-					traff=t10();
-					}
-				
-				//document.f2.txtarea.value=document.f2.txtarea.value+"\nträff: "+traff.toString();
-				switch (traff) //Extra-skador SKALLE
-				{
-					case 1: //Hjärna
-						if (dmgtype == "hugg")
-						{
-						trauma=Math.floor(redudmg*2);
-						pain=Math.floor(redudmg*1);
-						bleed=Math.floor(redudmg/2);
-						misc=traff.toString()+"Hjärna: Amp, Fast, Men";
-						}
-						else if (dmgtype == "kross")
-						{
-						trauma=Math.floor(redudmg*2);
-						pain=Math.floor(redudmg*1);
-						bleed=Math.floor(redudmg*0);
-						misc=traff.toString()+"Hjärna: Faller, Men";
-						}
-						break;
-					case 2: //Hjärna
-						if (dmgtype == "hugg")
-						{
-						trauma=Math.floor(redudmg/2);
-						pain=Math.floor(redudmg*1);
-						bleed=Math.floor(redudmg/2);
-						misc=traff.toString()+"Hjärna: Amp, Men"
-						}
-						else if (dmgtype == "kross")
-						{
-						trauma=Math.floor(redudmg*2);
-						pain=Math.floor(redudmg*1);
-						bleed=Math.floor(redudmg*0);
-						misc=traff.toString()+"Hjärna: Men";
-						}
-						break;
-					case 3: //Skallben
-						trauma=Math.floor(redudmg/2);
-						pain=Math.floor(redudmg/2);
-						bleed=Math.floor(redudmg/10);
-						misc=traff.toString()+"Skallben: Amp, Bryt, Fast, Ärr"
-						break;
-					case 4: //Skallben
-						trauma=Math.floor(redudmg/10);
-						pain=Math.floor(redudmg/2);
-						bleed=Math.floor(redudmg/10);
-						misc=traff.toString()+"Skallben: Amp, Bryt, Fast";
-						break;
-					case 5: //Skallben
-						trauma=Math.floor(redudmg/10);
-						pain=Math.floor(redudmg/2);
-						bleed=Math.floor(redudmg/10);
-						misc=traff.toString()+"Skallben: Amp, Bryt";
-						break;
-					case 6: //Omtöckning
-						trauma=Math.floor(redudmg/10);
-						pain=Math.floor(redudmg*1);
-						bleed=Math.floor(redudmg/10);
-						misc=traff.toString()+"Omtöckning: Amp, Faller, Tappar";
-						break;
-					case 7: //Omtöckning
-						trauma=Math.floor(redudmg/10);
-						pain=Math.floor(redudmg*1);
-						bleed=Math.floor(redudmg/10);
-						misc=traff.toString()+"Blödning: Amp, Tappar";
-						break;
-					case 8: //Blödning
-						trauma=Math.floor(redudmg/10);
-						pain=Math.floor(redudmg/10);
-						bleed=Math.floor(redudmg/2);
-						misc=traff.toString()+"Kött: Amp";
-						break;
-					case 9: //Köttsår
-						trauma=Math.floor(redudmg/10);
-						pain=Math.floor(redudmg/10);
-						bleed=Math.floor(redudmg/10);
-						misc=traff.toString()+"Kött: Amp, Ärr";
-						break;
-					case 10: //Köttsår
-						trauma=Math.floor(redudmg/10);
-						pain=Math.floor(redudmg/10);
-						bleed=Math.floor(redudmg/10);
-						misc=traff.toString()+"Kött:";
-						break;
-				}
-			}
-				case "hals": //Extra-skador HALS
-                                switch (dmgtype)
-                                {
-                                        case "hugg":
-                                                trauma=1;
-                                                pain=2;
-                                                bleed=1;
-                                                break;
-                                        case "kross":
-                                                trauma=0;
-                                                pain=3;
-                                                bleed=0;
-                                                break;
-                                }
-                                //no extra dmg
-                                if (redudmg > 9) //Extra-skador!
-                                {
-                                        if (document.f1.check1.checked)
-                                        {
-                                        traff=t6();
-                                        }
-                                        else
-                                        {
-                                        traff=t10();
-                                        }
-                                switch (traff)
-                                {
-
-					case 1: //Strupe
-                                        	trauma=Math.floor(redudmg*1);
-                                        	pain=Math.floor(redudmg/2);
-                                        	bleed=Math.floor(redudmg*1);
-                                        	misc=traff.toString()+"Strupe: Amp, Kväv, Tappar";
-						break;
-					case 2: //Strupe
-						trauma=Math.floor(redudmg*1);
-                                                pain=Math.floor(redudmg/2);
-                                                bleed=Math.floor(redudmg*1);
-                                                misc=traff.toString()+"Strupe: Amp, Kväv";
-                                                break;
-                                        case 3: //Nackkotor
-                                                trauma=Math.floor(redudmg/2);
-                                                pain=Math.floor(redudmg/2);
-                                                bleed=Math.floor(redudmg/10);
-                                                misc=traff.toString()+"Nackkotor: Amp, Bryt, Fast";
-                                                break;
-                                        case 4: //Nackkotor
-                                                trauma=Math.floor(redudmg/2);
-                                                pain=Math.floor(redudmg/2);
-                                                bleed=Math.floor(redudmg/10);
-                                                misc=traff.toString()+"Nackkotor: Amp, Bryt";
-                                                break;
-                                        case 5: //Pulsåder
-                                                trauma=Math.floor(redudmg/2);
-                                                pain=Math.floor(redudmg/2);
-                                                bleed=Math.floor(redudmg*2);
-                                                misc=traff.toString()+"Pulsåder: Amp";
-                                                break;
-                                        case 6: //Artärblödning
-                                                trauma=Math.floor(redudmg/10);
-                                                pain=Math.floor(redudmg/10);
-                                                bleed=Math.floor(redudmg*1);
-                                                misc=traff.toString()+"Artärblödning: Amp";
-                                                break;
-                                        case 7: //Omtöckning
-                                                trauma=Math.floor(redudmg/x10);
-                                                pain=Math.floor(redudmg*1);
-                                                bleed=Math.floor(redudmg/10);
-                                                misc=traff.toString()+"Omtöckning: Amp, Tappar";
-                                                break;
-                                        case 8: //Blödning
-                                                trauma=Math.floor(redudmg/10);
-                                                pain=Math.floor(redudmg/10);
-                                                bleed=Math.floor(redudmg/2);
-                                                misc=traff.toString()+"Blödning: Amp";
-                                                break;
-                                        case 9: //Kött
-                                                trauma=Math.floor(redudmg/10);
-                                                pain=Math.floor(redudmg/10);
-                                                bleed=Math.floor(redudmg/10);
-                                                misc=traff.toString()+"Kött: Amp, Ärr";
-                                                break;
-                                        case 10: //Kött
-                                                trauma=Math.floor(redudmg/10);
-                                                pain=Math.floor(redudmg/10);
-                                                bleed=Math.floor(redudmg/10);
-                                                misc=traff.toString()+"Kött:";
-                                                break;
-				}
-			}
-				//document.f2.txtarea.value=document.f2.txtarea.value+"\nT+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
-			//Extra dmg
-			
-		break;
-	}
-	//document.f2.txtarea.value=document.f2.txtarea.value+"T+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
-	document.f2.txtarea.value = "T+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
-}
-
-function fuling(malomr){
+function fuling(malomr,redudmg){
 //document.f1.t3.value
 if (malomr.match("Ansikte"))
 {
-return "ansikte";
+traff="ansikte";
 }
 if (malomr.match("Skalle"))
 {
-return "skalle";
+traff="skalle";
 }
 if (malomr.match("Hals"))
 {
-return "hals";
+traff="hals";
 }
 if (malomr.match("Arm"))
 {
-return "arm";
+traff="arm";
 }
 if (malomr.match("Bröstkorg"))
 {
-return "bröstkorg";
+traff="bröstkorg";
 }
 if (malomr.match("Mage"))
 {
-return "mage";
+traff="mage";
 }
 if (malomr.match("Underliv"))
 {
-return "underliv";
+traff="underliv";
 }
 if (malomr.match("Ben"))
 {
-return "ben";
+traff="ben";
 }
+
+//alert(document.f1.dmgtype.value);
+switch (document.f1.dmgtype.value)
+{
+	case "kross":
+		
+		break;
+	case "hugg":
+		hugg_skada(traff,redudmg);
+		break;
+	case "stick":
+
+		break;
+}
+
+
 //return;
 }
 
@@ -719,8 +119,10 @@ Träff:
 <br>
 Reducerad skadeverkan:
 <form name=f2>
-	<input type=number name=redudmg value=0 onChange='totaldmg(fuling(document.f1.t3.value),document.f1.dmgtype.value,document.f2.redudmg.value);'> 
-	<input name=b1 type=button value="OK" onClick='totaldmg(fuling(document.f1.t3.value),document.f1.dmgtype.value,document.f2.redudmg.value);'><br>
+	<!-- <input type=number name=redudmg value=0 onChange='fuling(document.f1.t3.value,document.f1.dmgtype.value,document.f2.redudmg.value);'>  -->
+	<!-- <input name=b1 type=button value="OK" onClick='fuling(document.f1.t3.value,document.f1.dmgtype.value,document.f2.redudmg.value);'><br> -->
+	<input type=number name=redudmg value=0 onChange='fuling(document.f1.t3.value,document.f2.redudmg.value);'>
+	<input name=b1 type=button value="OK" onClick='fuling(document.f1.t3.value,document.f2.redudmg.value);'><br>
 	<style type="text/css">
 	textarea {
     resize: none;

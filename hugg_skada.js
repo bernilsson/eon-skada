@@ -147,13 +147,13 @@ function hugg_skada(delomr,redudmg){
 						trauma=Math.floor(redudmg/10);
 						pain=Math.floor(redudmg*1);
 						bleed=Math.floor(redudmg/10);
-						misc=traff.toString()+"Blödning: Amp, Tappar";
+						misc=traff.toString()+"Omtöckning: Amp, Tappar";
 						break;
 					case 8: //Blödning
 						trauma=Math.floor(redudmg/10);
 						pain=Math.floor(redudmg/10);
 						bleed=Math.floor(redudmg/2);
-						misc=traff.toString()+"Kött: Amp";
+						misc=traff.toString()+"Blödning: Amp";
 						break;
 					case 9: //Köttsår
 						trauma=Math.floor(redudmg/10);

@@ -12,7 +12,7 @@
     <title>EON3 Skade-generator</title>
 	<script type="text/javascript" src="find_hit.js"></script>
 	<script type="text/javascript" src="hugg_skada.js"></script>
-	<!--<script type="text/javascript" src="totaldmg.js"></script> -->
+	<script type="text/javascript" src="kross_skada.js"></script>
 	<script type="text/javascript"> 
 	
 
@@ -49,7 +49,7 @@ if (malomr.match("Hals"))
 {
 traff="hals";
 }
-if (malomr.match("Arm"))
+if (malomr.match("rm"))
 {
 traff="arm";
 }
@@ -65,22 +65,22 @@ if (malomr.match("Underliv"))
 {
 traff="underliv";
 }
-if (malomr.match("Ben"))
+if (malomr.match("ben"))
 {
 traff="ben";
 }
 
-//alert(document.f1.dmgtype.value);
+//alert('Målområde: '+traff+' '+document.f1.dmgtype.value);
 switch (document.f1.dmgtype.value)
 {
 	case "kross":
-		
+		kross_skada(traff,redudmg);
 		break;
 	case "hugg":
 		hugg_skada(traff,redudmg);
 		break;
 	case "stick":
-
+		alert('Not implemented yet');
 		break;
 }
 

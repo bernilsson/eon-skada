@@ -26,63 +26,63 @@ function kross_skada(delomr,redudmg){
 		switch (traff)
 		{
 			case 1: //Hjärna
-				trauma=trauma+Math.floor(redudmg*2);
-				pain=pain+Math.floor(redudmg*1);
-				bleed=bleed+Math.floor(redudmg*0);
+				trauma=Math.floor(redudmg*2);
+				pain=Math.floor(redudmg*1);
+				bleed=Math.floor(redudmg*0);
 				misc=traff.toString()+"Hjärna: Men";
 			break;
 			case 2: //Öga
-				trauma=trauma+Math.floor(redudmg/2);
-				pain=pain+Math.floor(redudmg*1);
-				bleed=bleed+Math.floor(redudmg*0);
+				trauma=Math.floor(redudmg/2);
+				pain=Math.floor(redudmg*1);
+				bleed=Math.floor(redudmg*0);
 				misc=traff.toString()+"Öga: Men, Ärr"
 				break;
 			case 3: //Käke/mun
-				trauma=trauma+Math.floor(redudmg/2);
-				pain=pain+Math.floor(redudmg/2);
-				bleed=bleed+Math.floor(redudmg/10);
+				trauma=Math.floor(redudmg/2);
+				pain=Math.floor(redudmg/2);
+				bleed=Math.floor(redudmg/10);
 				misc=traff.toString()+"Käke: Men, Ärr"
 				break;
 			case 4: //Öra
-				trauma=trauma+Math.floor(redudmg/10);
-				pain=pain+Math.floor(redudmg/2);
-				bleed=bleed+Math.floor(redudmg*0);
+				trauma=Math.floor(redudmg/10);
+				pain=Math.floor(redudmg/2);
+				bleed=Math.floor(redudmg*0);
 				misc=traff.toString()+"Öra: Men, Ärr";
 				break;
 			case 5: //Näsa
-				trauma=trauma+Math.floor(redudmg/10);
-				pain=pain+Math.floor(redudmg/2);
-				bleed=bleed+Math.floor(redudmg/10);
+				trauma=Math.floor(redudmg/10);
+				pain=Math.floor(redudmg/2);
+				bleed=Math.floor(redudmg/10);
 				misc=traff.toString()+"Näsa: Bryt, Ärr";
 				break;
 			case 6: //Omtöckning
-				trauma=trauma+Math.floor(redudmg/10);
-				pain=pain+Math.floor(redudmg*1);
-				bleed=bleed+Math.floor(redudmg*0);
+				trauma=Math.floor(redudmg/10);
+				pain=Math.floor(redudmg*1);
+				bleed=Math.floor(redudmg*0);
 				misc=traff.toString()+"Omtöckning: Faller, Tappar";
 				break;
 			case 7: //Omtöckning
-				trauma=trauma+Math.floor(redudmg/10);
-				pain=pain+Math.floor(redudmg*1);
-				bleed=bleed+Math.floor(redudmg*0);
+				trauma=Math.floor(redudmg/10);
+				pain=Math.floor(redudmg*1);
+				bleed=Math.floor(redudmg*0);
 				misc=traff.toString()+"Omtöckning: Faller, Tappar";
 				break;
 			case 8: //Omtöckning
-				trauma=trauma+Math.floor(redudmg/10);
-				pain=pain+Math.floor(redudmg*1);
-				bleed=bleed+Math.floor(redudmg*0);
+				trauma=Math.floor(redudmg/10);
+				pain=Math.floor(redudmg*1);
+				bleed=Math.floor(redudmg*0);
 				misc=traff.toString()+"Omtöckning: Tappar";
 				break;
 			case 9: //Blödning
-				trauma=trauma+Math.floor(redudmg/10);
-				pain=pain+Math.floor(redudmg/10);
-				bleed=bleed+Math.floor(redudmg/2);
+				trauma=Math.floor(redudmg/10);
+				pain=Math.floor(redudmg/10);
+				bleed=Math.floor(redudmg/2);
 				misc=traff.toString()+"Blödning: ";
 				break;
 			case 10: //Kött
-				trauma=trauma+Math.floor(redudmg/10);
-				pain=pain+Math.floor(redudmg/10);
-				bleed=bleed+Math.floor(redudmg*0);
+				trauma=Math.floor(redudmg/10);
+				pain=Math.floor(redudmg/10);
+				bleed=Math.floor(redudmg*0);
 				misc=traff.toString()+"Kött:";
 				break;
 			}

@@ -603,7 +603,7 @@ function kross_skada(delomr,redudmg){
 			case 2: //Benpipa
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
-				bleed=Math.floor(redudmg/10);
+				bleed=Math.floor(redudmg*0);
 				misc=traff.toString()+"Benpipa: Bryt, Faller";
 				break;
 			case 3: //Benpipa

@@ -126,13 +126,13 @@ function hugg_skada(delomr,redudmg){
 						misc=traff.toString()+"Skallben: Amp, Bryt, Fast, Ärr"
 						break;
 					case 4: //Skallben
-						trauma=Math.floor(redudmg/10);
+						trauma=Math.floor(redudmg/2);
 						pain=Math.floor(redudmg/2);
 						bleed=Math.floor(redudmg/10);
 						misc=traff.toString()+"Skallben: Amp, Bryt, Fast";
 						break;
 					case 5: //Skallben
-						trauma=Math.floor(redudmg/10);
+						trauma=Math.floor(redudmg/2);
 						pain=Math.floor(redudmg/2);
 						bleed=Math.floor(redudmg/10);
 						misc=traff.toString()+"Skallben: Amp, Bryt";

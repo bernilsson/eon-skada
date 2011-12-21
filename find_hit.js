@@ -8,7 +8,7 @@ function find_hit(hitsel,hitnum,dmgtype){
 	case "normalhugg": case "normalkross": case "normalstick":
 
 		       	//document.f1.t3.value=hitsel+dmgtype;
-			switch (true) //Träfftabell för normalt hugg-slag:
+			switch (true) //Tr" + unescape("%E4") + "fftabell f" + unescape("%F6") + "r normalt hugg-slag:
 			{
 				case ((hitnum >= 1) && (hitnum <= 20)):
 					//Huvud
@@ -26,56 +26,56 @@ function find_hit(hitsel,hitnum,dmgtype){
 					}
 					break;
 				case ((hitnum >= 21) && (hitnum <= 40)):
-					document.f1.t3.value="Vänster arm";
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm";
 					if ((hitnum >= 21) && (hitnum <=24))
 					{
-						document.f1.t3.value="Vänster arm - Skuldra [4]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster arm - Skuldra [4]";
 					}
 					else if ((hitnum >= 25) && (hitnum <=28))
 					{
-						document.f1.t3.value="Vänster arm - Överarm [6]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster arm - " + unescape("%F6") + "verarm [6]";
 					}
 					else if ((hitnum >= 29) && (hitnum <= 30))
 					{
-						document.f1.t3.value="Vänster arm - Armbåge [8]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster arm - Armb" + unescape("%E5") + "ge [8]";
 					}
 					else if ((hitnum >= 31) && (hitnum <= 36))
 					{
-						document.f1.t3.value="Vänster arm - Underarm [10]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster arm - Underarm [10]";
 					}
 					else if ((hitnum >= 37) && (hitnum <= 40))
 					{
-						document.f1.t3.value="Vänster arm - Hand [12]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster arm - Hand [12]";
 					}
-					//Vänster arm
+					//V" + unescape("%E4") + "nster arm
 					break;
 				case ((hitnum >= 41) && (hitnum <= 60)):
-					document.f1.t3.value="Höger arm";
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm";
 					if ((hitnum >= 41) && (hitnum <= 44))
 					{
-						document.f1.t3.value="Höger arm - Skuldra [5]";
+						document.f1.t3.value="H" + unescape("%F6") + "ger arm - Skuldra [5]";
 					}
 					else if ((hitnum >= 45) && (hitnum <= 48))
 					{
-						document.f1.t3.value="Höger arm - Överarm [7]";
+						document.f1.t3.value="H" + unescape("%F6") + "ger arm - " + unescape("%F6") + "verarm [7]";
 					}
 					else if ((hitnum >= 49) && (hitnum <= 50))
 					{
-						document.f1.t3.value="Höger arm - Armbåge [9]";
+						document.f1.t3.value="H" + unescape("%F6") + "ger arm - Armb" + unescape("%E5") + "ge [9]";
 					}
 					else if ((hitnum >= 51) && (hitnum <= 56))
 					{
-						document.f1.t3.value="Höger arm - Underarm [11]";
+						document.f1.t3.value="H" + unescape("%F6") + "ger arm - Underarm [11]";
 					}
 					else if ((hitnum >= 57) && (hitnum <= 60))
 					{
-						document.f1.t3.value="Höger arm - Hand [13]";
+						document.f1.t3.value="H" + unescape("%F6") + "ger arm - Hand [13]";
 					}
-					//Höger arm
+					//H" + unescape("%F6") + "ger arm
 					break;
 				case ((hitnum >= 61) && (hitnum <= 70)):
-					document.f1.t3.value="Bröstkorg [14]";
-					//Bröstkorg
+					document.f1.t3.value="Br" + unescape("%F6") + "stkorg [14]";
+					//Br" + unescape("%F6") + "stkorg
 					break;
 				case ((hitnum >= 71) && (hitnum <= 80)):
 					document.f1.t3.value="Buk";
@@ -91,53 +91,53 @@ function find_hit(hitsel,hitnum,dmgtype){
 					break;
 
 				case ((hitnum >= 81) && (hitnum <= 90)):
-					document.f1.t3.value="Vänster ben";
+					document.f1.t3.value="V" + unescape("%E4") + "nster ben";
 					if ((hitnum >= 81) && (hitnum <= 82))
 					{
-						document.f1.t3.value="Vänster ben - Höft [17]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster ben - H" + unescape("%F6") + "ft [17]";
 					}	
 					else if ((hitnum >= 83) && (hitnum <= 84))
 					{
-						document.f1.t3.value="Vänster ben - Lår [19]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster ben - L" + unescape("%E5") + "r [19]";
 					}
 					else if ((hitnum >= 85) && (hitnum <= 86))
 					{
-						document.f1.t3.value="Vänster ben - Knä [21]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster ben - Kn" + unescape("%E4") + " [21]";
 					}
 					else if ((hitnum >= 87) && (hitnum <= 89))
 					{
-						document.f1.t3.value="Vänster ben - Vad [23]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster ben - Vad [23]";
 					}
 					else if (hitnum == 90)
 					{
-						document.f1.t3.value="Vänster ben - Fot [25]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster ben - Fot [25]";
 					} 
-					//Vänster ben
+					//V" + unescape("%E4") + "nster ben
 					break;
 
 				case ((hitnum >= 91) && (hitnum <= 100)):
-					document.f1.t3.value="Höger ben";
+					document.f1.t3.value="H" + unescape("%F6") + "ger ben";
 					if ((hitnum >= 91) && (hitnum <= 92))
 					{
-						document.f1.t3.value="Höger ben - Höft [18]";
+						document.f1.t3.value="H" + unescape("%F6") + "ger ben - H" + unescape("%F6") + "ft [18]";
 					}
 					if ((hitnum >= 93) && (hitnum <= 94))
 					{
-						document.f1.t3.value="Höger ben - Lår [20]";
+						document.f1.t3.value="H" + unescape("%F6") + "ger ben - L" + unescape("%E5") + "r [20]";
 					}
 					if ((hitnum >= 95) && (hitnum <= 96))
 					{
-						document.f1.t3.value="Höger ben - Knä [22]";
+						document.f1.t3.value="H" + unescape("%F6") + "ger ben - Kn" + unescape("%E4") + " [22]";
 					}
 					if ((hitnum >= 97) && (hitnum <= 99))
 					{
-						document.f1.t3.value="Höger ben - Vad [24]";
+						document.f1.t3.value="H" + unescape("%F6") + "ger ben - Vad [24]";
 					}
 					if (hitnum >= 100)
 					{
-						document.f1.t3.value="Höger ben - Fot [26]";
+						document.f1.t3.value="H" + unescape("%F6") + "ger ben - Fot [26]";
 					}
-					//Höger ben
+					//H" + unescape("%F6") + "ger ben
 					break;
 
 			}
@@ -146,7 +146,7 @@ function find_hit(hitsel,hitnum,dmgtype){
 
 
 		case "highhugg": case "highkross": case "highstick":
-			switch (true) //Träfftabell för högt hugg-slag
+			switch (true) //Tr" + unescape("%E4") + "fftabell f" + unescape("%F6") + "r h" + unescape("%F6") + "gt hugg-slag
 			{
 				case ((hitnum >= 1) && (hitnum <= 30)): //Huvud
 					if ((hitnum >= 1) && (hitnum <= 12))
@@ -163,57 +163,57 @@ function find_hit(hitsel,hitnum,dmgtype){
                                                 document.f1.t3.value="Huvud - Hals [3]";
                                         }
 					break;
-				case ((hitnum >= 31) && (hitnum <= 60)): //Vänster arm
-					//document.f1.t3.value="Vänster arm";
+				case ((hitnum >= 31) && (hitnum <= 60)): //V" + unescape("%E4") + "nster arm
+					//document.f1.t3.value="V" + unescape("%E4") + "nster arm";
 
                                         if ((hitnum >= 31) && (hitnum <= 36))
                                         {
-                                                document.f1.t3.value="Vänster arm - Skuldra [4]";
+                                                document.f1.t3.value="V" + unescape("%E4") + "nster arm - Skuldra [4]";
                                         }
                                         else if ((hitnum >= 37) && (hitnum <= 42))
                                         {
-                                                document.f1.t3.value="Vänster arm - Överarm [6]";
+                                                document.f1.t3.value="V" + unescape("%E4") + "nster arm - " + unescape("%F6") + "verarm [6]";
                                         }
                                         else if ((hitnum >= 43) && (hitnum <= 45))
                                         {
-                                                document.f1.t3.value="Vänster arm - Armbåge [8]";
+                                                document.f1.t3.value="V" + unescape("%E4") + "nster arm - Armb" + unescape("%E5") + "ge [8]";
                                         }
                                         else if ((hitnum >= 46) && (hitnum <= 54))
                                         {
-                                                document.f1.t3.value="Vänster arm - Underarm [10]";
+                                                document.f1.t3.value="V" + unescape("%E4") + "nster arm - Underarm [10]";
                                         }
                                         else if ((hitnum >= 55) && (hitnum <= 60))
                                         {
-                                                document.f1.t3.value="Vänster arm - Hand [12]";
+                                                document.f1.t3.value="V" + unescape("%E4") + "nster arm - Hand [12]";
                                         }
 
 					break;
-				case ((hitnum >= 61) && (hitnum <= 90)): //Höger arm
+				case ((hitnum >= 61) && (hitnum <= 90)): //H" + unescape("%F6") + "ger arm
 
                                         if ((hitnum >= 61) && (hitnum <= 66))
                                         {
-                                                document.f1.t3.value="Höger arm - Skuldra [5]";
+                                                document.f1.t3.value="H" + unescape("%F6") + "ger arm - Skuldra [5]";
                                         }
                                         else if ((hitnum >= 67) && (hitnum <= 72))
                                         {
-                                                document.f1.t3.value="Höger arm - Överarm [7]";
+                                                document.f1.t3.value="H" + unescape("%F6") + "ger arm - " + unescape("%F6") + "verarm [7]";
                                         }
                                         else if ((hitnum >= 73) && (hitnum <= 75))
                                         {
-                                                document.f1.t3.value="Höger arm - Armbåge [9]";
+                                                document.f1.t3.value="H" + unescape("%F6") + "ger arm - Armb" + unescape("%E5") + "ge [9]";
                                         }
                                         else if ((hitnum >= 76) && (hitnum <= 84))
                                         {
-                                                document.f1.t3.value="Höger arm - Underarm [11]";
+                                                document.f1.t3.value="H" + unescape("%F6") + "ger arm - Underarm [11]";
                                         }
                                         else if ((hitnum >= 85) && (hitnum <= 90))
                                         {
-                                                document.f1.t3.value="Höger arm - Hand [13]";
+                                                document.f1.t3.value="H" + unescape("%F6") + "ger arm - Hand [13]";
                                         }
 					break;
 				case ((hitnum >= 91) && (hitnum <= 100)):
-					document.f1.t3.value="Bröstkorg [14]";
-					//Bröstkorg
+					document.f1.t3.value="Br" + unescape("%F6") + "stkorg [14]";
+					//Br" + unescape("%F6") + "stkorg
 					break;
 			}
 			break;
@@ -231,49 +231,49 @@ function find_hit(hitsel,hitnum,dmgtype){
                                         }
 
 					break;
-				case ((hitnum >= 21) && (hitnum <= 60)): //Vänster Ben
+				case ((hitnum >= 21) && (hitnum <= 60)): //V" + unescape("%E4") + "nster Ben
                                         if ((hitnum >= 21) && (hitnum <= 28))
                                         {
-                                                document.f1.t3.value="Vänster ben - Höft [17]";
+                                                document.f1.t3.value="V" + unescape("%E4") + "nster ben - H" + unescape("%F6") + "ft [17]";
                                         }       
                                         else if ((hitnum >= 29) && (hitnum <= 36))
                                         {
-                                                document.f1.t3.value="Vänster ben - Lår [19]";
+                                                document.f1.t3.value="V" + unescape("%E4") + "nster ben - L" + unescape("%E5") + "r [19]";
                                         }
                                         else if ((hitnum >= 37) && (hitnum <= 44))
                                         {
-                                                document.f1.t3.value="Vänster ben - Knä [21]";
+                                                document.f1.t3.value="V" + unescape("%E4") + "nster ben - Kn" + unescape("%E4") + " [21]";
                                         }
                                         else if ((hitnum >= 45) && (hitnum <= 56))
                                         {
-                                                document.f1.t3.value="Vänster ben - Vad [23]";
+                                                document.f1.t3.value="V" + unescape("%E4") + "nster ben - Vad [23]";
                                         }
                                         else if ((hitnum == 57) && (hitnum <= 60))
                                         {
-                                                document.f1.t3.value="Vänster ben - Fot [25]";
+                                                document.f1.t3.value="V" + unescape("%E4") + "nster ben - Fot [25]";
                                         } 
 					break;
-				case ((hitnum >= 61) && (hitnum <= 100)): //Höger ben
-                                        //document.f1.t3.value="Höger ben";
+				case ((hitnum >= 61) && (hitnum <= 100)): //H" + unescape("%F6") + "ger ben
+                                        //document.f1.t3.value="H" + unescape("%F6") + "ger ben";
                                         if ((hitnum >= 61) && (hitnum <= 68))
                                         {
-                                                document.f1.t3.value="Höger ben - Höft [18]";
+                                                document.f1.t3.value="H" + unescape("%F6") + "ger ben - H" + unescape("%F6") + "ft [18]";
                                         }
                                         if ((hitnum >= 69) && (hitnum <= 76))
                                         {
-                                                document.f1.t3.value="Höger ben - Lår [20]";
+                                                document.f1.t3.value="H" + unescape("%F6") + "ger ben - L" + unescape("%E5") + "r [20]";
                                         }
                                         if ((hitnum >= 77) && (hitnum <= 84))
                                         {
-                                                document.f1.t3.value="Höger ben - Knä [22]";
+                                                document.f1.t3.value="H" + unescape("%F6") + "ger ben - Kn" + unescape("%E4") + " [22]";
                                         }
                                         if ((hitnum >= 85) && (hitnum <= 96))
                                         {
-                                                document.f1.t3.value="Höger ben - Vad [24]";
+                                                document.f1.t3.value="H" + unescape("%F6") + "ger ben - Vad [24]";
                                         }
                                         if ((hitnum >= 97) && (hitnum <= 100))
                                         {
-                                                document.f1.t3.value="Höger ben - Fot [26]";
+                                                document.f1.t3.value="H" + unescape("%F6") + "ger ben - Fot [26]";
                                         }
 					break;
 

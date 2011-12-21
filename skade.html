@@ -98,7 +98,9 @@ switch (document.f1.dmgtype.value)
 <input name=b1 type=button value='1T6' onClick='t6()';> -->
 <input type=text name=t2 value="" size=3>
 <input name=b1 type=button value='1T100' onClick='t100();find_hit(document.f1.hit.value,document.f1.t2.value,document.f1.dmgtype.value)';>
-<input type="checkbox" name=check1 !checked/>M&aring;lpunkter<br>
+
+<input type="checkbox" name=check1 !checked/>M&aring;lpunkter
+<input type="checkbox" name=check2 !checked/>Delomr&aring;den<br>
 <select name=dmgtype onChange=''>
 	<option value=hugg>Hugg</option>
 	<option value=kross>Kross</option>
@@ -112,10 +114,10 @@ switch (document.f1.dmgtype.value)
 </select>
 <select name=hit onChange='find_hit((this.options[this.selectedIndex].value),document.f1.t2.value,document.f1.dmgtype.value);'>
   <option value=normal>Normal</option>
-  <option value=high>Högt</option>
-  <option value=low>Lågt</option>
+  <option value=high>H&ouml;gt</option>
+  <option value=low>L&aring;gt</option>
 </select>
-Träff:
+Tr&auml;ff:
 <input type=text name=t3 value="" disabled size=25>
 </form>
 <br>

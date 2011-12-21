@@ -55,9 +55,9 @@ if (malomr.match("rm"))
 {
 traff="arm";
 }
-if (malomr.match("Bröstkorg"))
+if (malomr.match("Br&ouml;stkorg"))
 {
-traff="bröstkorg";
+traff="br&ouml;stkorg";
 }
 if (malomr.match("Mage"))
 {
@@ -72,7 +72,7 @@ if (malomr.match("ben"))
 traff="ben";
 }
 
-//alert('Målområde: '+traff+' '+document.f1.dmgtype.value);
+//alert('M&aring;lomr&aring;de: '+traff+' '+document.f1.dmgtype.value);
 switch (document.f1.dmgtype.value)
 {
 	case "kross":
@@ -98,9 +98,7 @@ switch (document.f1.dmgtype.value)
 <input name=b1 type=button value='1T6' onClick='t6()';> -->
 <input type=text name=t2 value="" size=3>
 <input name=b1 type=button value='1T100' onClick='t100();find_hit(document.f1.hit.value,document.f1.t2.value,document.f1.dmgtype.value)';>
-
-<input type="checkbox" name=check1 !checked/>M&aring;lpunkter
-<input type="checkbox" name=check2 !checked/>Delomr&aring;den<br>
+<input type="checkbox" name=check1 !checked/>M&aring;lpunkter<br>
 <select name=dmgtype onChange=''>
 	<option value=hugg>Hugg</option>
 	<option value=kross>Kross</option>
@@ -123,6 +121,8 @@ Tr&auml;ff:
 <br>
 Reducerad skadeverkan:
 <form name=f2>
+	<!-- <input type=number name=redudmg value=0 onChange='fuling(document.f1.t3.value,document.f1.dmgtype.value,document.f2.redudmg.value);'>  -->
+	<!-- <input name=b1 type=button value="OK" onClick='fuling(document.f1.t3.value,document.f1.dmgtype.value,document.f2.redudmg.value);'><br> -->
 	<input type=number name=redudmg value=0 onChange='fuling(document.f1.t3.value,document.f2.redudmg.value);'>
 	<input name=b1 type=button value="OK" onClick='fuling(document.f1.t3.value,document.f2.redudmg.value);'><br>
 	<style type="text/css">

@@ -1,4 +1,3 @@
-
 function stick_skada(delomr,redudmg){
 	var trauma=0;
 	var pain=0;
@@ -659,5 +658,5 @@ function stick_skada(delomr,redudmg){
 	break;
 	}
 	//document.f2.txtarea.value=document.f2.txtarea.value+"T+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
-	document.f2.txtarea.value = "Trauma: " + trauma + "\nSm" + unescape("%E4") + "rta: " + pain + "\nBl" + unescape("%F6") + "dning: " + bleed + "\n" + misc
+	document.f2.txtarea.value = "T+ " + trauma + "\nS+: " + pain + "\nB+ " + bleed + "\n" + misc
 }

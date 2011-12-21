@@ -31,11 +31,11 @@ function kross_skada(delomr,redudmg){
 				bleed=Math.floor(redudmg*0);
 				misc=traff.toString()+"Hj" + unescape("%E4") + "rna: Men";
 			break;
-			case 2: //Öga
+			case 2: //" + unescape("%F6") + "ga
 				trauma=Math.floor(redudmg/2);
 				pain=Math.floor(redudmg*1);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Öga: Men, " + unescape("%E4") + "rr"
+				misc=traff.toString()+"" + unescape("%F6") + "ga: Men, " + unescape("%E4") + "rr"
 				break;
 			case 3: //K" + unescape("%E4") + "ke/mun
 				trauma=Math.floor(redudmg/2);
@@ -43,11 +43,11 @@ function kross_skada(delomr,redudmg){
 				bleed=Math.floor(redudmg/10);
 				misc=traff.toString()+"K" + unescape("%E4") + "ke: Men, " + unescape("%E4") + "rr"
 				break;
-			case 4: //Öra
+			case 4: //" + unescape("%F6") + "ra
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Öra: Men, " + unescape("%E4") + "rr";
+				misc=traff.toString()+"" + unescape("%F6") + "ra: Men, " + unescape("%E4") + "rr";
 				break;
 			case 5: //N" + unescape("%E4") + "sa
 				trauma=Math.floor(redudmg/10);
@@ -55,35 +55,35 @@ function kross_skada(delomr,redudmg){
 				bleed=Math.floor(redudmg/10);
 				misc=traff.toString()+"N" + unescape("%E4") + "sa: Bryt, " + unescape("%E4") + "rr";
 				break;
-			case 6: //Omtöckning
+			case 6: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg*1);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: Faller, Tappar";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Faller, Tappar";
 				break;
-			case 7: //Omtöckning
+			case 7: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg*1);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: Faller, Tappar";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Faller, Tappar";
 				break;
-			case 8: //Omtöckning
+			case 8: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg*1);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: Tappar";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Tappar";
 				break;
-			case 9: //Blödning
+			case 9: //Bl" + unescape("%F6") + "dning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/10);
 				bleed=Math.floor(redudmg/2);
-				misc=traff.toString()+"Blödning: ";
+				misc=traff.toString()+"Bl" + unescape("%F6") + "dning: ";
 				break;
-			case 10: //Kött
+			case 10: //K" + unescape("%F6") + "tt
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/10);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Kött:";
+				misc=traff.toString()+"K" + unescape("%F6") + "tt:";
 				break;
 			}
 		}
@@ -137,35 +137,35 @@ function kross_skada(delomr,redudmg){
 						bleed=Math.floor(redudmg*0);
 						misc=traff.toString()+"Skallben: Bryt";
 						break;
-					case 6: //Omtöckning
+					case 6: //Omt" + unescape("%F6") + "ckning
 						trauma=Math.floor(redudmg/10);
 						pain=Math.floor(redudmg*1);
 						bleed=Math.floor(redudmg*0);
-						misc=traff.toString()+"Omtöckning: Faller, Tappar";
+						misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Faller, Tappar";
 						break;
-					case 7: //Omtöckning
+					case 7: //Omt" + unescape("%F6") + "ckning
 						trauma=Math.floor(redudmg/10);
 						pain=Math.floor(redudmg*1);
 						bleed=Math.floor(redudmg*0);
-						misc=traff.toString()+"Omtöckning: Amp, Tappar";
+						misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Amp, Tappar";
 						break;
-					case 8: //Omtöckning 
+					case 8: //Omt" + unescape("%F6") + "ckning 
 						trauma=Math.floor(redudmg/10);
 						pain=Math.floor(redudmg*1);
 						bleed=Math.floor(redudmg*0);
-						misc=traff.toString()+"Omtöckning: Tappar";
+						misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Tappar";
 						break;
-					case 9: //Blödning
+					case 9: //Bl" + unescape("%F6") + "dning
 						trauma=Math.floor(redudmg/10);
 						pain=Math.floor(redudmg/10);
 						bleed=Math.floor(redudmg/2);
-						misc=traff.toString()+"Blödning: ";
+						misc=traff.toString()+"Bl" + unescape("%F6") + "dning: ";
 						break;
-					case 10: //Kötts" + unescape("%E5") + "r
+					case 10: //K" + unescape("%F6") + "tts" + unescape("%E5") + "r
 						trauma=Math.floor(redudmg/10);
 						pain=Math.floor(redudmg/10);
 						bleed=Math.floor(redudmg*0);
-						misc=traff.toString()+"Kött:";
+						misc=traff.toString()+"K" + unescape("%F6") + "tt:";
 						break;
 				}
 			}
@@ -218,41 +218,41 @@ function kross_skada(delomr,redudmg){
 					bleed=Math.floor(redudmg*0);
 					misc=traff.toString()+"Nackkotor: Bryt";
 					break;
-				case 6: //Omtöckning
+				case 6: //Omt" + unescape("%F6") + "ckning
 					trauma=Math.floor(redudmg/10);
 					pain=Math.floor(redudmg*1);
 					bleed=Math.floor(redudmg*0);
-					misc=traff.toString()+"Omtöckning: Faller, Tappar";
+					misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Faller, Tappar";
 					break;
-				case 7: //Omtöckning
+				case 7: //Omt" + unescape("%F6") + "ckning
 					trauma=Math.floor(redudmg/10);
 					pain=Math.floor(redudmg*1);
 					bleed=Math.floor(redudmg*0);
-					misc=traff.toString()+"Omtöckning: Faller, Tappar";
+					misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Faller, Tappar";
 					break;
-				case 8: //Omtöckning
+				case 8: //Omt" + unescape("%F6") + "ckning
 					trauma=Math.floor(redudmg/10);
 					pain=Math.floor(redudmg*1);
 					bleed=Math.floor(redudmg*0);
-					misc=traff.toString()+"Blödning: Tappar";
+					misc=traff.toString()+"Bl" + unescape("%F6") + "dning: Tappar";
 					break;
-				case 9: //Blödning
+				case 9: //Bl" + unescape("%F6") + "dning
 					trauma=Math.floor(redudmg/10);
 					pain=Math.floor(redudmg/10);
 					bleed=Math.floor(redudmg/2);
-					misc=traff.toString()+"Blödning: ";
+					misc=traff.toString()+"Bl" + unescape("%F6") + "dning: ";
 					break;
-				case 10: //Kött
+				case 10: //K" + unescape("%F6") + "tt
 					trauma=Math.floor(redudmg/10);
 					pain=Math.floor(redudmg/10);
 					bleed=Math.floor(redudmg/10);
-					misc=traff.toString()+"Kött:";
+					misc=traff.toString()+"K" + unescape("%F6") + "tt:";
 					break;
 			}
 		}
 			//document.f2.txtarea.value=document.f2.txtarea.value+"\nT+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
 		break;
-		case "" + unescape("%F6") + "": //Extra-skador " + unescape("%F6") + "
+		case "arm": //Extra-skador " + unescape("%F6") + "
 		trauma=1;
 		pain=1;
 		bleed=1;
@@ -299,41 +299,41 @@ function kross_skada(delomr,redudmg){
 				bleed=Math.floor(redudmg*0);
 				misc=traff.toString()+"Muskler/Senor: Men";
 				break;
-			case 6: //Omtöckning
+			case 6: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: Tappar";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Tappar";
 				break;
-			case 7: //Omtöckning 
+			case 7: //Omt" + unescape("%F6") + "ckning 
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: Tappar";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Tappar";
 				break;
-			case 8: //Omtöckning
+			case 8: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: ";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: ";
 				break;
-			case 9: //Blödning
+			case 9: //Bl" + unescape("%F6") + "dning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/10);
 				bleed=Math.floor(redudmg/2);
-				misc=traff.toString()+"Blödning: ";
+				misc=traff.toString()+"Bl" + unescape("%F6") + "dning: ";
 				break;
-			case 10: //Kött
+			case 10: //K" + unescape("%F6") + "tt
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/10);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Kött:";
+				misc=traff.toString()+"K" + unescape("%F6") + "tt:";
 				break;
 		}
 	}
 	//document.f2.txtarea.value=document.f2.txtarea.value+"\nT+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
 	break;
-	case "bröstkorg": //Extra-skador BRÖSTKORG
+	case "bröstkorg": //Extra-skador BR" + unescape("%F6") + "STKORG
 		trauma=0;
 		pain=2;
 		bleed=0;
@@ -387,29 +387,29 @@ function kross_skada(delomr,redudmg){
 				bleed=Math.floor(redudmg*0);
 				misc=traff.toString()+"Revben: Bryt";
 				break;
-			case 7: //Omtöckning
+			case 7: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: Tappar";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Tappar";
 				break;
-			case 8: //Omtöckning
+			case 8: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: ";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: ";
 				break;
-			case 9: //Blödning
+			case 9: //Bl" + unescape("%F6") + "dning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/10);
 				bleed=Math.floor(redudmg/2);
-				misc=traff.toString()+"Blödning: ";
+				misc=traff.toString()+"Bl" + unescape("%F6") + "dning: ";
 				break;
-			case 10: //Kött
+			case 10: //K" + unescape("%F6") + "tt
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/10);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Kött:";
+				misc=traff.toString()+"K" + unescape("%F6") + "tt:";
 				break;
 		}
 	}
@@ -456,41 +456,41 @@ function kross_skada(delomr,redudmg){
 				bleed=Math.floor(redudmg*0);
 				misc=traff.toString()+"Ryggrad: Bryt";
 				break;
-			case 5: //Art" + unescape("%E4") + "rblödning
+			case 5: //Art" + unescape("%E4") + "rbl" + unescape("%F6") + "dning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/10);
 				bleed=Math.floor(redudmg*1);
-				misc=traff.toString()+"Art" + unescape("%E4") + "rblödning: ";
+				misc=traff.toString()+"Art" + unescape("%E4") + "rbl" + unescape("%F6") + "dning: ";
 				break;
-			case 6: //Omtöckning
+			case 6: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: Faller, Tappar";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Faller, Tappar";
 				break;
-			case 7: //Omtöckning
+			case 7: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: Tappar";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Tappar";
 				break;
-			case 8: //Omtöckning
+			case 8: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: ";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: ";
 				break;
-			case 9: //Blödning
+			case 9: //Bl" + unescape("%F6") + "dning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/10);
 				bleed=Math.floor(redudmg/2);
-				misc=traff.toString()+"Blödning: ";
+				misc=traff.toString()+"Bl" + unescape("%F6") + "dning: ";
 				break;
-			case 10: //Kött
+			case 10: //K" + unescape("%F6") + "tt
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/10);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Kött:";
+				misc=traff.toString()+"K" + unescape("%F6") + "tt:";
 				break;
 		}
 	}
@@ -513,65 +513,65 @@ function kross_skada(delomr,redudmg){
 			switch (traff)
 			{
 
-			case 1: //Könsorgan
+			case 1: //K" + unescape("%F6") + "nsorgan
 				trauma=Math.floor(redudmg/2);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Könsorgan: Faller, Men, Tappar";
+				misc=traff.toString()+"K" + unescape("%F6") + "nsorgan: Faller, Men, Tappar";
 				break;
-			case 2: //Könsorgan
+			case 2: //K" + unescape("%F6") + "nsorgan
 				trauma=Math.floor(redudmg/2);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Könsorgan: Faller, Men, Tappar";
+				misc=traff.toString()+"K" + unescape("%F6") + "nsorgan: Faller, Men, Tappar";
 				break;
-			case 3: //Könsorgan
+			case 3: //K" + unescape("%F6") + "nsorgan
 				trauma=Math.floor(redudmg/2);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Könsorgan: Faller, Men";
+				misc=traff.toString()+"K" + unescape("%F6") + "nsorgan: Faller, Men";
 				break;
-			case 4: //Könsorgan
+			case 4: //K" + unescape("%F6") + "nsorgan
 				trauma=Math.floor(redudmg/2);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Könsorgan: Faller, Men";
+				misc=traff.toString()+"K" + unescape("%F6") + "nsorgan: Faller, Men";
 				break;
-			case 5: //Omtöckning
+			case 5: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg*1);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: Faller, Tappar";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Faller, Tappar";
 				break;
-			case 6: //Omtöckning
+			case 6: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg*1);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: Faller, Tappar";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Faller, Tappar";
 				break;
-			case 7: //Omtöckning
+			case 7: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg*1);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: Faller";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Faller";
 				break;
-			case 8: //Omtöckning
+			case 8: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg*1);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: ";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: ";
 				break;
-			case 9: //Blödning
+			case 9: //Bl" + unescape("%F6") + "dning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/10);
 				bleed=Math.floor(redudmg/2);
-				misc=traff.toString()+"Blödning: ";
+				misc=traff.toString()+"Bl" + unescape("%F6") + "dning: ";
 				break;
-			case 10: //Kött
+			case 10: //K" + unescape("%F6") + "tt
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/10);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Kött:";
+				misc=traff.toString()+"K" + unescape("%F6") + "tt:";
 				break;
 		}
 	}
@@ -624,35 +624,35 @@ function kross_skada(delomr,redudmg){
 				bleed=Math.floor(redudmg*0);
 				misc=traff.toString()+"Muskler/Senor: Men";
 				break;
-			case 6: //Omtöckning
+			case 6: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: Faller";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Faller";
 				break;
-			case 7: //Omtöckning
+			case 7: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: Faller";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: Faller";
 				break;
-			case 8: //Omtöckning
+			case 8: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Omtöckning: ";
+				misc=traff.toString()+"Omt" + unescape("%F6") + "ckning: ";
 				break;
-			case 9: //Blödning
+			case 9: //Bl" + unescape("%F6") + "dning
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/10);
 				bleed=Math.floor(redudmg/2);
-				misc=traff.toString()+"Blödning: ";
+				misc=traff.toString()+"Bl" + unescape("%F6") + "dning: ";
 				break;
-			case 10: //Kött
+			case 10: //K" + unescape("%F6") + "tt
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/10);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Kött:";
+				misc=traff.toString()+"K" + unescape("%F6") + "tt:";
 				break;
 		}
 	}

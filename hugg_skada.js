@@ -333,7 +333,7 @@ function hugg_skada(delomr,redudmg){
 	}
 	//document.f2.txtarea.value=document.f2.txtarea.value+"\nT+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
 	break;
-	case "bröstkorg": //Extra-skador BR" + unescape("%F6") + "STKORG
+	case "br"+ unescape("%F6") +"stkorg": //Extra-skador BR" + unescape("%F6") + "STKORG
 		trauma=1;
 		pain=1;
 		bleed=1;

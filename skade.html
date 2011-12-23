@@ -87,14 +87,45 @@ switch (document.f1.dmgtype.value)
 
 }
 
+function toggle_precisionsanfall()
+{
+	//alert(document.f1.check2.checked);
+	if (document.f1.check2.checked)
+	{
+	document.getElementById("gubben").style.display="block";
+	}
+	else {
+	document.getElementById("gubben").style.display="none"; 
+	}
+}
+
 	</script>
   </head>
   <body>
 <form name=f1>
 <input type=text name=t2 value="" size=3>
 <input name=b1 type=button value='1T100' onClick='t100();find_hit(document.f1.hit.value,document.f1.t2.value,document.f1.dmgtype.value)';>
-<input type="checkbox" name=check1 !checked/>M&aring;lpunkter
-<input type="checkbox" name=check2 !checked/>Precisionsanfall<br>
+<input type="checkbox" name=check1 !checked />M&aring;lpunkter
+<input type="checkbox" name=check2 !checked onchange="toggle_precisionsanfall()"; />Precisionsanfall<br>
+<style type="text/css">
+img
+{
+position:fixed;
+left:500px;
+top:0px;
+z-index:-1;
+}
+</style>
+<div id="gubben" style="display:none">
+<img src="gubbe.png" width=255 height=350;>
+<input type="radio" name="head" id="delomr" style="position:fixed;left:650px;top:40px;"/>
+<input type="radio" name="leftarm" id="delomr" style="position:fixed;left:680px;top:90px;"/>
+<input type="radio" name="rightarm" id="delomr" style="position:fixed;left:570px;top:90px;"/>
+<input type="radio" name="chest" id="delomr" style="position:fixed;left:613px;top:90px;"/>
+<input type="radio" name="abdomen" id="delomr" style="position:fixed;left:613px;top:132px;"/>
+<input type="radio" name="leftleg" id="delomr" style="position:fixed;left:660px;top:230px;"/>
+<input type="radio" name="rightleg" id="delomr" style="position:fixed;left:570px;top:230px;"/>
+</div>
 <select name=dmgtype onChange=''>
 	<option value=hugg>Hugg</option>
 	<option value=kross>Kross</option>
@@ -117,7 +148,7 @@ Tr&auml;ff:
 <br>
 Reducerad skadeverkan:
 <form name=f2>
-	<input type=number name=redudmg value=0 onChange='fuling(document.f1.t3.value,document.f2.redudmg.value);'>
+	<input type=number name=redudmg value=1 min=1 onChange='fuling(document.f1.t3.value,document.f2.redudmg.value);'>
 	<input name=b1 type=button value="OK" onClick='fuling(document.f1.t3.value,document.f2.redudmg.value);'><br>
 	<style type="text/css">
 	textarea {

@@ -89,14 +89,17 @@ switch (document.f1.dmgtype.value)
 
 function toggle_precisionsanfall()
 {
-	//alert(document.f1.check2.checked);
 	if (document.f1.check2.checked)
 	{
+	document.f1.hit.value="normal";
+	document.f1.hit.disabled=1;
 	document.getElementById("gubben").style.display="block";
 	}
 	else {
+	document.f1.hit.disabled=0;
 	document.getElementById("gubben").style.display="none"; 
 	}
+
 }
 
 	</script>
@@ -105,8 +108,8 @@ function toggle_precisionsanfall()
 <form name=f1>
 <input type=text name=t2 value="" size=3>
 <input name=b1 type=button value='1T100' onClick='t100();find_hit(document.f1.hit.value,document.f1.t2.value,document.f1.dmgtype.value)';>
-<input type="checkbox" name=check1 !checked />M&aring;lpunkter
-<input type="checkbox" name=check2 !checked onchange="toggle_precisionsanfall()"; />Precisionsanfall<br>
+<input type="checkbox" name=check1 !checked /><label for="check1">M&aring;lpunkter</label>
+<input type="checkbox" name=check2 !checked onchange="toggle_precisionsanfall()"; /><label for="check2">Precisionsanfall</label><br>
 <style type="text/css">
 img
 {
@@ -118,15 +121,17 @@ z-index:-1;
 </style>
 <div id="gubben" style="display:none">
 <img src="gubbe.png" width=255 height=350;>
-<input type="radio" name="head" id="delomr" style="position:fixed;left:650px;top:40px;"/>
-<input type="radio" name="leftarm" id="delomr" style="position:fixed;left:680px;top:90px;"/>
-<input type="radio" name="rightarm" id="delomr" style="position:fixed;left:570px;top:90px;"/>
-<input type="radio" name="chest" id="delomr" style="position:fixed;left:613px;top:90px;"/>
-<input type="radio" name="abdomen" id="delomr" style="position:fixed;left:613px;top:132px;"/>
-<input type="radio" name="leftleg" id="delomr" style="position:fixed;left:660px;top:230px;"/>
-<input type="radio" name="rightleg" id="delomr" style="position:fixed;left:570px;top:230px;"/>
+<input type="radio" value="head" name="delomr" id="delomr" style="position:fixed;left:650px;top:40px;"/>
+<input type="radio" value="leftarm" name="delomr" style="position:fixed;left:680px;top:90px;"/>
+<input type="radio" value="rightarm" name="delomr" style="position:fixed;left:570px;top:90px;"/>
+<input type="radio" value="chest" name="delomr" style="position:fixed;left:613px;top:90px;"/>
+<input type="radio" value="abdomen" name="delomr" style="position:fixed;left:613px;top:132px;"/>
+<input type="radio" value="leftleg" name="delomr" style="position:fixed;left:660px;top:230px;"/>
+<input type="radio" value="rightleg" name="delomr" style="position:fixed;left:570px;top:230px;"/>
 </div>
-<select name=dmgtype onChange=''>
+
+
+<select name=dmgtype onChange='' value=hugg>
 	<option value=hugg>Hugg</option>
 	<option value=kross>Kross</option>
 	<option value=stick>Stick</option>

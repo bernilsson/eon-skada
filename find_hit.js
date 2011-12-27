@@ -121,11 +121,6 @@ function find_hit(hitsel,hitnum,dmgtype){
         }
         break;
 
-
-
-
-
-	
 	case "normalstick":
 
 			switch (true) //Tr" + unescape("%E4") + "fftabell f" + unescape("%F6") + "r normalt stick:
@@ -214,8 +209,6 @@ function find_hit(hitsel,hitnum,dmgtype){
 
 
 	case "normalhugg": case "normalkross": 
-
-		       	//document.f1.t3.value=hitsel+dmgtype;
 			switch (true) //Tr" + unescape("%E4") + "fftabell f" + unescape("%F6") + "r normalt hugg-slag:
 			{
 				case ((hitnum >= 1) && (hitnum <= 20)):
@@ -541,5 +534,79 @@ function find_hit(hitsel,hitnum,dmgtype){
 			}
 			break; 
 
+		case "lowstick":
+			switch (true)
+			{
+				case ((hitnum >= 1) && (hitnum <= 2)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - Skuldra [4]";
+					break;
+				case ((hitnum >= 3) && (hitnum <= 4)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - " + unescape("%F6") + "verarm [6]";
+					break;
+				case (hitnum == 5):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - Armb" + unescape("%E5") + "ge [8]";
+					break;
+				case ((hitnum >= 6) && (hitnum <= 8)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - Underarm [10]";
+					break;
+				case ((hitnum >= 9) && (hitnum <= 10)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - Hand [12]";
+					break;
+				case ((hitnum >= 11) && (hitnum <= 12)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - Skuldra [5]";
+					break;
+				case ((hitnum >= 13) && (hitnum <= 14)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - " + unescape("%F6") + "verarm [7]";
+					break;
+				case (hitnum == 15):
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - Armb" + unescape("%E5") + "ge [9]";
+					break;
+				case ((hitnum >= 16) && (hitnum <= 18)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - Underarm [11]";
+					break;
+				case ((hitnum >= 19) && (hitnum <= 20)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - Underarm [11]";
+					break;
+				case ((hitnum >= 21) && (hitnum <= 30)):
+					document.f1.t3.value="Br" + unescape("%F6") + "stkorg [14]";
+					break;
+				case ((hitnum >= 31) && (hitnum <= 38)):
+					document.f1.t3.value="Buk - Mage [15]";
+					break;
+				case ((hitnum >= 39) && (hitnum <= 40)):
+					document.f1.t3.value="Buk - Underliv [16]";
+					break;
+				case ((hitnum >= 41) && (hitnum <= 46)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster ben - H" + unescape("%F6") + "ft [17]";
+					break;
+				case ((hitnum >= 47) && (hitnum <= 52)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster ben - L" + unescape("%E5") + "r [19]";
+					break;
+				case ((hitnum >= 53) && (hitnum <= 58)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster ben - Kn" + unescape("%E4") + " [21]";
+					break;
+                case ((hitnum >= 59) && (hitnum <= 67)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster ben - Vad [23]";
+					break;
+				case ((hitnum >= 68) && (hitnum <= 70)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster ben - Fot [25]";
+					break;
+				case ((hitnum >= 71) && (hitnum <= 76)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger ben - H" + unescape("%F6") + "ft [18]";
+					break;
+				case ((hitnum >= 77) && (hitnum <= 82):
+					document.f1.t3.value="H" + unescape("%F6") + "ger ben - L" + unescape("%E5") + "r [20]";
+					break;
+				case ((hitnum >= 83) && (hitnum <= 88):
+					document.f1.t3.value="H" + unescape("%F6") + "ger ben - Kn" + unescape("%E4") + " [22]";
+					break;
+				case ((hitnum >= 89) && (hitnum <= 97):
+					document.f1.t3.value="H" + unescape("%F6") + "ger ben - Vad [24]";
+					break;
+				case ((hitnum >= 98) && (hitnum <= 100):
+					document.f1.t3.value="H" + unescape("%F6") + "ger ben - Fot [26]";
+					break;
+			}
+			break; 
 	}
 }

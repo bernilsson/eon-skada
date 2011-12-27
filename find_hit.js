@@ -6,7 +6,7 @@ function find_hit(hitsel,hitnum,dmgtype){
 	{
 	case "headhugg": case "headkross": case "headstick":
 	hitnum=t10();
-	switch (true)
+	switch (true) //Head
 	{
 		case ((hitnum >= 1) && (hitnum <= 4)):
 			document.f1.t3.value="Huvud - Ansikte [1]";
@@ -22,7 +22,7 @@ function find_hit(hitsel,hitnum,dmgtype){
 	break;
 	case "leftarmhugg": case "leftarmkross": case "leftarmstick":
 	hitnum=t10();
-	switch (true)
+	switch (true) //Left Arm
 	{
 		case ((hitnum >= 1) && (hitnum <= 2)):
 			document.f1.t3.value="V" + unescape("%E4") + "nster arm - Skuldra [4]";
@@ -44,7 +44,7 @@ function find_hit(hitsel,hitnum,dmgtype){
 
         case "rightarmhugg": case "rightarmkross": case "rightarmstick":
         hitnum=t10();
-        switch (true)
+        switch (true) //Right arm
         {
                 case ((hitnum >= 1) && (hitnum <= 2)):
                         document.f1.t3.value="H" + unescape("%F6") + "ger arm - Skuldra [5]";
@@ -63,12 +63,12 @@ function find_hit(hitsel,hitnum,dmgtype){
                         break;
         }
         break;
-        case "chesthugg": case "chestkross": case "cheststick":
-	document.f1.t3.value="Br" + unescape("%F6") + "stkorg [14]";
+        case "chesthugg": case "chestkross": case "cheststick": //Chest
+		document.f1.t3.value="Br" + unescape("%F6") + "stkorg [14]";
         break;
-	case "abdomenhugg": case "abdomenkross": case "abdomenstick":
+		case "abdomenhugg": case "abdomenkross": case "abdomenstick": //Belly
         hitnum=t10();
-        switch (true)
+        switch (true) 
         {
                 case ((hitnum >= 1) && (hitnum <= 8)):
 			document.f1.t3.value="Buk - Mage [15]";
@@ -77,10 +77,10 @@ function find_hit(hitsel,hitnum,dmgtype){
 			document.f1.t3.value="Buk - Underliv [16]";	
                         break;
         }
-	break;
-	case "leftleghugg": case "leftlegkross": case "leftlegstick":
+		break;
+		case "leftleghugg": case "leftlegkross": case "leftlegstick":
         hitnum=t10();
-        switch (true)
+        switch (true) //Left leg
         {
                 case ((hitnum >= 1) && (hitnum <= 2)):
 			document.f1.t3.value="V" + unescape("%E4") + "nster ben - H" + unescape("%F6") + "ft [17]";
@@ -101,7 +101,7 @@ function find_hit(hitsel,hitnum,dmgtype){
         break;
         case "rightleghugg": case "rightlegkross": case "rightlegstick":
         hitnum=t10();
-        switch (true)
+        switch (true) //Right Leg
         {
                 case ((hitnum >= 1) && (hitnum <= 2)):
                         document.f1.t3.value="H" + unescape("%F6") + "ger ben - H" + unescape("%F6") + "ft [18]";
@@ -350,10 +350,63 @@ function find_hit(hitsel,hitnum,dmgtype){
 
 			}
 			break;
+			case "highstick":
+			switch (true) //Tr" + unescape("%E4") + "fftabell f" + unescape("%F6") + "r h" + unescape("%F6") + "gt hugg-slag
+			{
+				case ((hitnum >= 1) && (hitnum <= 8)): //Huvud
+					document.f1.t3.value="Huvud - Ansikte [1]";
+					break;
+				case ((hitnum >= 9) && (hitnum <= 16)):
+					document.f1.t3.value="Huvud - Skalle [2]";
+					break;					
+				case ((hitnum >= 17) && (hitnum <= 20)):
+					document.f1.t3.value="Huvud - Hals [3]";
+					break;
+				case ((hitnum >= 21) && (hitnum <= 24)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - Skuldra [4]";
+					break;
+				case ((hitnum >= 25) && (hitnum <= 28)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - " + unescape("%F6") + "verarm [6]";
+                    break;
+				case ((hitnum >= 29) && (hitnum <= 30)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - Armb" + unescape("%E5") + "ge [8]";
+					break;
+				case ((hitnum >= 31) && (hitnum <= 36)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - Underarm [10]";
+                    break;
+				case ((hitnum >= 37) && (hitnum <= 40)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - Hand [12]";
+					break;
+				case ((hitnum >= 41) && (hitnum <= 44)): 
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - Skuldra [5]"
+					break;
+				case ((hitnum >= 45) && (hitnum <= 48)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - " + unescape("%F6") + "verarm [7]";
+					break;
+				case ((hitnum >= 49) && (hitnum <= 50)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - Armb" + unescape("%E5") + "ge [9]";
+					break;
+				case ((hitnum >= 51) && (hitnum <= 56)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - Underarm [11]";
+					break;
+				case ((hitnum >= 57) && (hitnum <= 60)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - Hand [13]";
+					break;
+				case ((hitnum >= 61) && (hitnum <= 90)):
+					document.f1.t3.value="Br" + unescape("%F6") + "stkorg [14]";
+					break;
+				case ((hitnum >= 91) && (hitnum <= 98)):
+					document.f1.t3.value="Buk - Mage [15]";
+					break;
+				case ((hitnum >= 99) && (hitnum <= 100)):
+					document.f1.t3.value="Buk - Underliv [16]";
+					break;
+			}
+			break;
 
 
 
-		case "highhugg": case "highkross": case "highstick":
+		case "highhugg": case "highkross":
 			switch (true) //Tr" + unescape("%E4") + "fftabell f" + unescape("%F6") + "r h" + unescape("%F6") + "gt hugg-slag
 			{
 				case ((hitnum >= 1) && (hitnum <= 30)): //Huvud

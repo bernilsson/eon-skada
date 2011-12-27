@@ -658,5 +658,5 @@ function stick_skada(delomr,redudmg){
 	break;
 	}
 	//document.f2.txtarea.value=document.f2.txtarea.value+"T+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
-	document.f2.txtarea.value = "T+ " + trauma + "\nS+: " + pain + "\nB+ " + bleed + "\n" + misc
+	document.f2.txtarea.value = "T+" + trauma + "\nS+" + pain + "\nB+" + bleed + "\n" + misc
 }

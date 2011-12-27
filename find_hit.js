@@ -4,7 +4,8 @@ function find_hit(hitsel,hitnum,dmgtype){
 	//alert(hitsel+dmgtype);
 	switch (hitsel+dmgtype)
 	{
-	case "headugg": case "headkross":
+	case "headhugg": case "headkross":
+	alert('hej');
 	break;
 	case "normalstick":
 

@@ -97,6 +97,7 @@ function toggle_precisionsanfall()
 	}
 	else {
 	document.f1.hit.disabled=0;
+	document.f1.hit.value="normal";
 	document.getElementById("gubben").style.display="none"; 
 	}
 
@@ -121,13 +122,13 @@ z-index:-1;
 </style>
 <div id="gubben" style="display:none">
 <img src="gubbe.png" width=255 height=350;>
-<input type="radio" value="head" name="delomr" id="delomr" style="position:fixed;left:650px;top:40px;"/>
-<input type="radio" value="leftarm" name="delomr" style="position:fixed;left:680px;top:90px;"/>
-<input type="radio" value="rightarm" name="delomr" style="position:fixed;left:570px;top:90px;"/>
-<input type="radio" value="chest" name="delomr" style="position:fixed;left:613px;top:90px;"/>
-<input type="radio" value="abdomen" name="delomr" style="position:fixed;left:613px;top:132px;"/>
-<input type="radio" value="leftleg" name="delomr" style="position:fixed;left:660px;top:230px;"/>
-<input type="radio" value="rightleg" name="delomr" style="position:fixed;left:570px;top:230px;"/>
+<input type="radio" value="head" name="delomr" id="head" style="position:fixed;left:650px;top:40px;" onclick='document.f1.hit.value=this.value'/>
+<input type="radio" value="leftarm" name="delomr" id="leftarm" style="position:fixed;left:680px;top:90px;" onclick='document.f1.hit.value=this.value'/>
+<input type="radio" value="rightarm" name="delomr" id="rightarm" style="position:fixed;left:570px;top:90px;" onclick='document.f1.hit.value=this.value'/>
+<input type="radio" value="chest" name="delomr" id="chest" style="position:fixed;left:613px;top:90px;" onclick='document.f1.hit.value=this.value'/>
+<input type="radio" value="abdomen" name="delomr" id="abdomen" style="position:fixed;left:613px;top:132px;" onclick='document.f1.hit.value=this.value'/>
+<input type="radio" value="leftleg" name="delomr" id="leftleg" style="position:fixed;left:660px;top:230px;"onclick='document.f1.hit.value=this.value'/>
+<input type="radio" value="rightleg" name="delomr" id="rightleg" style="position:fixed;left:570px;top:230px;"onclick='document.f1.hit.value=this.value'/>
 </div>
 
 
@@ -143,9 +144,16 @@ z-index:-1;
   <option value=fourleg>Fyrbent djur</option>
 </select>
 <select name=hit onChange='find_hit((this.options[this.selectedIndex].value),document.f1.t2.value,document.f1.dmgtype.value);'>
-  <option value=normal>Normal</option>
-  <option value=high>H&ouml;gt</option>
-  <option value=low>L&aring;gt</option>
+  <option value=normal !hidden>Normal</option>
+  <option value=high !hidden>H&ouml;gt</option>
+  <option value=low !hidden>L&aring;gt</option>
+  <option value=head hidden>Huvud</option>
+  <option value=leftarm hidden>V&auml;nster arm</option>
+  <option value=rightarm hidden>H&ouml;ger arm</option>
+  <option value=chest hidden>Br&ouml;stkorg</option>
+  <option value=abdomen hidden>Buk</option>
+  <option value=leftleg hidden>V&auml;nster ben</option>
+  <option value=rightleg hidden>H&ouml;ger ben</option>
 </select>
 Tr&auml;ff:
 <input type=text name=t3 value="" disabled size=25>

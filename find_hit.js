@@ -1,11 +1,99 @@
 
 function find_hit(hitsel,hitnum,dmgtype){
 
-//	document.f1.t3.value=hitsel+dmgtype;
-
+	//alert(hitsel+dmgtype);
 	switch (hitsel+dmgtype)
 	{
-	case "normalhugg": case "normalkross": case "normalstick":
+	case "huvudhugg": case "huvudkross":
+	break;
+	case "normalstick":
+
+			switch (true) //Tr" + unescape("%E4") + "fftabell f" + unescape("%F6") + "r normalt stick:
+			{
+				case ((hitnum >= 1) && (hitnum <= 4)):
+					document.f1.t3.value="Huvud - Ansikte [1]";
+					break;
+				case ((hitnum >= 5) && (hitnum <= 8)):
+					document.f1.t3.value="Huvud - Skalle [2]";
+					break;
+				case ((hitnum >= 9) && (hitnum <= 10)):
+					document.f1.t3.value="Huvud - Hals [3]";
+					break;
+				case ((hitnum >= 11) && (hitnum <= 12)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - Skuldra [4]";
+					break;
+				case ((hitnum >= 13) && (hitnum <= 14)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - " + unescape("%F6") + "verarm [6]";
+					break;
+				case (hitnum == 15):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - Armb" + unescape("%E5") + "ge [8]";
+					break;
+				case ((hitnum >= 16) && (hitnum <= 18)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - Underarm [10]";
+					break;
+				case ((hitnum >= 19) && (hitnum <= 20)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster arm - Hand [12]";
+					break;
+				case ((hitnum >= 21) && (hitnum <= 22)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - Skuldra [5]";
+					break;
+				case ((hitnum >= 23) && (hitnum <= 24)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - " + unescape("%F6") + "verarm [7]";
+					break;
+				case (hitnum == 25):
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - Armb" + unescape("%E5") + "ge [9]";
+					break;
+				case ((hitnum >= 26) && (hitnum <= 28)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - Underarm [11]";
+					break;
+				case ((hitnum >= 29) && (hitnum <= 30)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger arm - Hand [13]";
+					break;
+				case ((hitnum >= 31) && (hitnum <= 50)):
+					document.f1.t3.value="Br" + unescape("%F6") + "stkorg [14]";
+					break;
+				case ((hitnum >= 51) && (hitnum <= 58)):
+					document.f1.t3.value="Buk - Mage [15]";
+					break;
+				case ((hitnum >= 59) && (hitnum <= 60)):
+					document.f1.t3.value="Buk - Underliv [16]";
+					break;
+				case ((hitnum >= 61) && (hitnum <= 64)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster ben - H" + unescape("%F6") + "ft [17]";
+					break;
+				case ((hitnum >= 65) && (hitnum <= 68)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster ben - L" + unescape("%E5") + "r [19]";
+					break;
+				case ((hitnum >= 69) && (hitnum <= 72)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster ben - Kn" + unescape("%E4") + " [21]";
+					break;
+				case ((hitnum >= 73) && (hitnum <= 78)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster ben - Vad [23]";
+					break;
+				case ((hitnum >= 79) && (hitnum <= 80)):
+					document.f1.t3.value="V" + unescape("%E4") + "nster ben - Fot [25]";
+					break;
+				case ((hitnum >= 81) && (hitnum <= 84)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger ben - H" + unescape("%F6") + "ft [18]";
+					break;
+				case ((hitnum >= 85) && (hitnum <= 88)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger ben - L" + unescape("%E5") + "r [20]";
+					break;
+				case ((hitnum >= 89) && (hitnum <= 92)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger ben - Kn" + unescape("%E4") + " [22]";
+					break;
+				case ((hitnum >= 93) && (hitnum <= 98)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger ben - Vad [24]";
+					break;
+				case ((hitnum >= 99) && (hitnum <= 100)):
+					document.f1.t3.value="H" + unescape("%F6") + "ger ben - Fot [26]";
+					break; 
+			}
+			break; 
+
+
+
+	case "normalhugg": case "normalkross": 
 
 		       	//document.f1.t3.value=hitsel+dmgtype;
 			switch (true) //Tr" + unescape("%E4") + "fftabell f" + unescape("%F6") + "r normalt hugg-slag:

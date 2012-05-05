@@ -417,9 +417,7 @@ function find_hit(hitsel,hitnum,dmgtype){
                                                 document.f1.t3.value="Huvud - Hals [3]";
                                         }
 					break;
-				case ((hitnum >= 31) && (hitnum <= 60)): //V" + unescape("%E4") + "nster arm
-					//document.f1.t3.value="V" + unescape("%E4") + "nster arm";
-
+				case ((hitnum >= 31) && (hitnum <= 60)): 
                                         if ((hitnum >= 31) && (hitnum <= 36))
                                         {
                                                 document.f1.t3.value="V" + unescape("%E4") + "nster arm - Skuldra [4]";
@@ -594,16 +592,16 @@ function find_hit(hitsel,hitnum,dmgtype){
 				case ((hitnum >= 71) && (hitnum <= 76)):
 					document.f1.t3.value="H" + unescape("%F6") + "ger ben - H" + unescape("%F6") + "ft [18]";
 					break;
-				case ((hitnum >= 77) && (hitnum <= 82):
+				case ((hitnum >= 77) && (hitnum <= 82)):
 					document.f1.t3.value="H" + unescape("%F6") + "ger ben - L" + unescape("%E5") + "r [20]";
 					break;
-				case ((hitnum >= 83) && (hitnum <= 88):
+				case ((hitnum >= 83) && (hitnum <= 88)):
 					document.f1.t3.value="H" + unescape("%F6") + "ger ben - Kn" + unescape("%E4") + " [22]";
 					break;
-				case ((hitnum >= 89) && (hitnum <= 97):
+				case ((hitnum >= 89) && (hitnum <= 97)):
 					document.f1.t3.value="H" + unescape("%F6") + "ger ben - Vad [24]";
 					break;
-				case ((hitnum >= 98) && (hitnum <= 100):
+				case ((hitnum >= 98) && (hitnum <= 100)):
 					document.f1.t3.value="H" + unescape("%F6") + "ger ben - Fot [26]";
 					break;
 			}

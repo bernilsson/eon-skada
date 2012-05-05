@@ -37,6 +37,19 @@ function t100(){
 	return my_num;
 }
 
+function ob(times){
+	var tot = 0;
+	var x = 0;
+	for(n=0;n<times;n++){
+		x = (Math.floor(6*Math.random())+1)
+		if(x == 6){
+			x = ob(2);
+		}
+		tot = tot +x;
+	}
+	return tot;
+}
+
 function fuling(malomr,redudmg){
 if (malomr.match("Ansikte"))
 {
@@ -137,7 +150,7 @@ z-index:-1;
 	<option value=kross>Kross</option>
 	<option value=stick>Stick</option>
 </select>
-<select name=target onChange='' value=humanoid>
+<select name=target onChange='' value=humanoid disabled>
   <option value=humanoid>Humanoid</option>
   <option value=rider>Mot ryttare</option>
   <option value=mount>Mot riddjur</option>
@@ -168,10 +181,7 @@ Reducerad skadeverkan:
     resize: none;
 }
 </style>
-<textarea name=txtarea rows="7" cols="22">
-T+
-S+
-B+
+<textarea name=txtarea rows="11" cols="50">
 </textarea>
 </form>
   </body>

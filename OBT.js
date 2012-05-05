@@ -1,4 +1,5 @@
 function ob(times){
+	times=Math.floor(times);
 	var tot = 0;
 	var x = 0;
 	for(n=0;n<times;n++){

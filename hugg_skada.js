@@ -135,7 +135,7 @@ function hugg_skada(delomr,redudmg){
 						trauma=Math.floor(redudmg/2);
 						pain=Math.floor(redudmg/2);
 						bleed=Math.floor(redudmg/10);
-						misc=traff.toString()+"Skallben: Amp, Bryt STY<"+ ob(redudmg/10)+"BRYT: S+"+Math.floor(redudmg/10)+" Om skallbenet krossas innebär det att offret har fått en spricka i skallbenet med hjärnskakning och kraftig huvudvärk som följd. Vid riktigt allvarliga skador kan benflisor trängas in i hjärnan och döden är då nära förestående.  Se sidan 72 Läkning av benbrott för mer information.";;
+						misc=traff.toString()+"Skallben: Amp, Bryt STY<"+ ob(redudmg/10)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om skallbenet krossas innebär det att offret har fått en spricka i skallbenet med hjärnskakning och kraftig huvudvärk som följd. Vid riktigt allvarliga skador kan benflisor trängas in i hjärnan och döden är då nära förestående.  Se sidan 72 Läkning av benbrott för mer information.";;
 						break;
 					case 6: //Omt" + unescape("%F6") + "ckning
 						trauma=Math.floor(redudmg/10);
@@ -210,7 +210,7 @@ function hugg_skada(delomr,redudmg){
 					trauma=Math.floor(redudmg/2);
 					pain=Math.floor(redudmg/2);
 					bleed=Math.floor(redudmg/10);
-					misc=traff.toString()+"Nackkotor: Amp, Bryt STY<"+ ob(redudmg/10)+"BRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";;
+					misc=traff.toString()+"Nackkotor: Amp, Bryt STY<"+ ob(redudmg/10)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";;
 					break;
 				case 5: //Puls" + unescape("%E5") + "der
 					trauma=Math.floor(redudmg/2);

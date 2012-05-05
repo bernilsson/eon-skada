@@ -53,7 +53,7 @@ function kross_skada(delomr,redudmg){
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg/10);
-				misc=traff.toString()+"N" + unescape("%E4") + "sa: Bryt STY<"+ ob((redudmg/10)+2)+", " + unescape("%E4") + "rr\n BRYT: S+"+Math.floor(redudmg/10)+" Offrets näsben är brutet. Första gången detta händer(och inte efterföljande gånger) sänks offrets PER med ett (-1).";
+				misc=traff.toString()+"N" + unescape("%E4") + "sa: Bryt STY<"+ ob((redudmg/10)+2)+", " + unescape("%E4") + "rr\nBRYT: S+"+Math.floor(redudmg/10)+" Offrets näsben är brutet. Första gången detta händer(och inte efterföljande gånger) sänks offrets PER med ett (-1).";
 				break;
 			case 6: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
@@ -123,19 +123,19 @@ function kross_skada(delomr,redudmg){
 						trauma=Math.floor(redudmg/2);
 						pain=Math.floor(redudmg/2);
 						bleed=Math.floor(redudmg*0);
-						misc=traff.toString()+"Skallben: Bryt STY<"+ ob((redudmg/10)+1)+", " + unescape("%E4") + "rr\n BRYT: S+"+Math.floor(redudmg/10)+" Om skallbenet krossas innebär det att offret har fått en spricka i skallbenet med hjärnskakning och kraftig huvudvärk som följd. Vid riktigt allvarliga skador kan benflisor trängas in i hjärnan och döden är då nära förestående.  Se sidan 72 Läkning av benbrott för mer information.";
+						misc=traff.toString()+"Skallben: Bryt STY<"+ ob((redudmg/10)+1)+", " + unescape("%E4") + "rr\nBRYT: S+"+Math.floor(redudmg/10)+" Om skallbenet krossas innebär det att offret har fått en spricka i skallbenet med hjärnskakning och kraftig huvudvärk som följd. Vid riktigt allvarliga skador kan benflisor trängas in i hjärnan och döden är då nära förestående.  Se sidan 72 Läkning av benbrott för mer information.";
 						break;
 					case 4: //Skallben
 						trauma=Math.floor(redudmg/2);
 						pain=Math.floor(redudmg/2);
 						bleed=Math.floor(redudmg*0);
-						misc=traff.toString()+"Skallben: Bryt STY<"+ ob((redudmg/10)+1)+"\n BRYT: S+"+Math.floor(redudmg/10)+" Om skallbenet krossas innebär det att offret har fått en spricka i skallbenet med hjärnskakning och kraftig huvudvärk som följd. Vid riktigt allvarliga skador kan benflisor trängas in i hjärnan och döden är då nära förestående.  Se sidan 72 Läkning av benbrott för mer information.";
+						misc=traff.toString()+"Skallben: Bryt STY<"+ ob((redudmg/10)+1)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om skallbenet krossas innebär det att offret har fått en spricka i skallbenet med hjärnskakning och kraftig huvudvärk som följd. Vid riktigt allvarliga skador kan benflisor trängas in i hjärnan och döden är då nära förestående.  Se sidan 72 Läkning av benbrott för mer information.";
 						break;
 					case 5: //Skallben
 						trauma=Math.floor(redudmg/2);
 						pain=Math.floor(redudmg/2);
 						bleed=Math.floor(redudmg*0);
-						misc=traff.toString()+"Skallben: Bryt  STY<"+ ob((redudmg/10)+1)+"\n BRYT: S+"+Math.floor(redudmg/10)+" Om skallbenet krossas innebär det att offret har fått en spricka i skallbenet med hjärnskakning och kraftig huvudvärk som följd. Vid riktigt allvarliga skador kan benflisor trängas in i hjärnan och döden är då nära förestående.  Se sidan 72 Läkning av benbrott för mer information.";
+						misc=traff.toString()+"Skallben: Bryt  STY<"+ ob((redudmg/10)+1)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om skallbenet krossas innebär det att offret har fått en spricka i skallbenet med hjärnskakning och kraftig huvudvärk som följd. Vid riktigt allvarliga skador kan benflisor trängas in i hjärnan och döden är då nära förestående.  Se sidan 72 Läkning av benbrott för mer information.";
 						break;
 					case 6: //Omt" + unescape("%F6") + "ckning
 						trauma=Math.floor(redudmg/10);
@@ -198,25 +198,25 @@ function kross_skada(delomr,redudmg){
 					trauma=Math.floor(redudmg/2);
 					pain=Math.floor(redudmg/2);
 					bleed=Math.floor(redudmg*0);
-					misc=traff.toString()+"Nackkotor: Bryt STY<"+ ob((redudmg/10)+1)+", Faller, Tappar CV<"+ob(3)+"\n BRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";
+					misc=traff.toString()+"Nackkotor: Bryt STY<"+ ob((redudmg/10)+1)+", Faller, Tappar CV<"+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";
 					break;
 				case 3: //Nackkotor
 					trauma=Math.floor(redudmg/2);
 					pain=Math.floor(redudmg/2);
 					bleed=Math.floor(redudmg*0);
-					misc=traff.toString()+"Nackkotor: Bryt STY<"+ ob((redudmg/10)+1)+", Faller, Tappar CV<"+ob(3)+"\n BRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";
+					misc=traff.toString()+"Nackkotor: Bryt STY<"+ ob((redudmg/10)+1)+", Faller, Tappar CV<"+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";
 					break;
 				case 4: //Nackkotor
 					trauma=Math.floor(redudmg/2);
 					pain=Math.floor(redudmg/2);
 					bleed=Math.floor(redudmg*0);
-					misc=traff.toString()+"Nackkotor: Bryt STY<"+ ob((redudmg/10)+1)+", Tappar CV<"+ob(3)+"\n BRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";
+					misc=traff.toString()+"Nackkotor: Bryt STY<"+ ob((redudmg/10)+1)+", Tappar CV<"+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";
 					break;
 				case 5: //Nackkotor
 					trauma=Math.floor(redudmg/2);
 					pain=Math.floor(redudmg/2);
 					bleed=Math.floor(redudmg*0);
-					misc=traff.toString()+"Nackkotor: Bryt STY<"+ ob((redudmg/10)+1)+", Tappar CV<"+ob(3)+"\n BRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";
+					misc=traff.toString()+"Nackkotor: Bryt STY<"+ ob((redudmg/10)+1)+", Tappar CV<"+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";
 					break;
 				case 6: //Omt" + unescape("%F6") + "ckning
 					trauma=Math.floor(redudmg/10);
@@ -273,19 +273,19 @@ function kross_skada(delomr,redudmg){
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Benpipa: Bryt STY<"+ ob((redudmg/10)+2)+", Tappar CV<"+ob(3)+"\n BRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";
+				misc=traff.toString()+"Benpipa: Bryt STY<"+ ob((redudmg/10)+2)+", Tappar CV<"+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";
 				break;
 			case 2: //Benpipa
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Benpipa: Bryt STY<"+ ob((redudmg/10)+2)+", Tappar CV<"+ob(3)+"\n BRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";
+				misc=traff.toString()+"Benpipa: Bryt STY<"+ ob((redudmg/10)+2)+", Tappar CV<"+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";
 				break;
 			case 3: //Benpipa
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Benpipa: Bryt STY<"+ ob((redudmg/10)+2)+"\n BRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";
+				misc=traff.toString()+"Benpipa: Bryt STY<"+ ob((redudmg/10)+2)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.";
 				break;
 			case 4: //Muskler/Senor
 				trauma=Math.floor(redudmg/2);
@@ -360,32 +360,32 @@ function kross_skada(delomr,redudmg){
 				trauma=Math.floor(redudmg*1);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Ryggrad: Bryt STY<"+ ob((redudmg/10)+1)+", Faller\n BRYT: S+"+Math.floor(redudmg/10)+"Om ryggraden bryts av en träff i Bröstkorgen blir offret förlamat från midjan och nedåt. Se sidan 72 Läkning av benbrott för mer information.";
+				misc=traff.toString()+"Ryggrad: Bryt STY<"+ ob((redudmg/10)+1)+", Faller\nBRYT: S+"+Math.floor(redudmg/10)+"Om ryggraden bryts av en träff i Bröstkorgen blir offret förlamat från midjan och nedåt. Se sidan 72 Läkning av benbrott för mer information.";
 				break;
 			case 3: //Ryggrad
 				trauma=Math.floor(redudmg*1);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Ryggrad: Bryt STY<"+ ob((redudmg/10)+1)+", Faller\n BRYT: S+"+Math.floor(redudmg/10)+"Om ryggraden bryts av en träff i Bröstkorgen blir offret förlamat från midjan och nedåt. Se sidan 72 Läkning av benbrott för mer information.";
+				misc=traff.toString()+"Ryggrad: Bryt STY<"+ ob((redudmg/10)+1)+", Faller\nBRYT: S+"+Math.floor(redudmg/10)+"Om ryggraden bryts av en träff i Bröstkorgen blir offret förlamat från midjan och nedåt. Se sidan 72 Läkning av benbrott för mer information.";
 				break;
 			case 4: //Revben
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Revben: Bryt STY<"+ ob((redudmg/10)+2)+", Faller, Tappar CV<"+ob(3)+"\n BRYT: S+"+Math.floor(redudmg/10)+"Brutna revben innebär att offret har svårare att röra sig. Se sidan 72 Läkning av benbrott för mer information.";
+				misc=traff.toString()+"Revben: Bryt STY<"+ ob((redudmg/10)+2)+", Faller, Tappar CV<"+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+"Brutna revben innebär att offret har svårare att röra sig. Se sidan 72 Läkning av benbrott för mer information.";
 				break;
 			case 5: //Revben
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Revben: Bryt STY<"+ ob((redudmg/10)+2)+", Faller\n BRYT: S+"+Math.floor(redudmg/10)+"Brutna revben innebär att offret har svårare att röra sig. Se sidan 72 Läkning av benbrott för mer information.";
+				misc=traff.toString()+"Revben: Bryt STY<"+ ob((redudmg/10)+2)+", Faller\nBRYT: S+"+Math.floor(redudmg/10)+"Brutna revben innebär att offret har svårare att röra sig. Se sidan 72 Läkning av benbrott för mer information.";
 
 				break;
 			case 6: //Revben
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Revben: Bryt STY<"+ ob((redudmg/10)+2)+"\n BRYT: S+"+Math.floor(redudmg/10)+"Brutna revben innebär att offret har svårare att röra sig. Se sidan 72 Läkning av benbrott för mer information.";
+				misc=traff.toString()+"Revben: Bryt STY<"+ ob((redudmg/10)+2)+"\nBRYT: S+"+Math.floor(redudmg/10)+"Brutna revben innebär att offret har svårare att röra sig. Se sidan 72 Läkning av benbrott för mer information.";
 				break;
 			case 7: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
@@ -448,13 +448,13 @@ function kross_skada(delomr,redudmg){
 				trauma=Math.floor(redudmg*1);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Ryggrad: Bryt STY<"+ ob((redudmg/10)+1)+", Faller\n BRYT: S+"+Math.floor(redudmg/10)+"Slå genast ett normalt slag (Ob3T6) mot offrets Tur slås - lyckas detta så undgår offret att bli förlamad. Misslyckas slaget blir offret förlamat från midjan och neråt. Se sidan 72 Läkning av benbrott för mer information.";
+				misc=traff.toString()+"Ryggrad: Bryt STY<"+ ob((redudmg/10)+1)+", Faller\nBRYT: S+"+Math.floor(redudmg/10)+"Slå genast ett normalt slag (Ob3T6) mot offrets Tur slås - lyckas detta så undgår offret att bli förlamad. Misslyckas slaget blir offret förlamat från midjan och neråt. Se sidan 72 Läkning av benbrott för mer information.";
 				break;
 			case 4: //Ryggrad
 				trauma=Math.floor(redudmg*1);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Ryggrad: Bryt STY<"+ ob((redudmg/10)+1)+"\n BRYT: S+"+Math.floor(redudmg/10)+"Slå genast ett normalt slag (Ob3T6) mot offrets Tur slås - lyckas detta så undgår offret att bli förlamad. Misslyckas slaget blir offret förlamat från midjan och neråt. Se sidan 72 Läkning av benbrott för mer information.";
+				misc=traff.toString()+"Ryggrad: Bryt STY<"+ ob((redudmg/10)+1)+"\nBRYT: S+"+Math.floor(redudmg/10)+"Slå genast ett normalt slag (Ob3T6) mot offrets Tur slås - lyckas detta så undgår offret att bli förlamad. Misslyckas slaget blir offret förlamat från midjan och neråt. Se sidan 72 Läkning av benbrott för mer information.";
 				break;
 			case 5: //Art" + unescape("%E4") + "rbl" + unescape("%F6") + "dning
 				trauma=Math.floor(redudmg/10);
@@ -598,19 +598,19 @@ function kross_skada(delomr,redudmg){
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Benpipa: Bryt STY<"+ ob((redudmg/10)+1)+", Faller\n BRYT: S+"+Math.floor(redudmg/10)+"Om en benpipa är bruten kan inte den skadade kroppsdelen användas. Se sidan 72 Läkning av benbrott för mer information.";
+				misc=traff.toString()+"Benpipa: Bryt STY<"+ ob((redudmg/10)+1)+", Faller\nBRYT: S+"+Math.floor(redudmg/10)+"Om en benpipa är bruten kan inte den skadade kroppsdelen användas. Se sidan 72 Läkning av benbrott för mer information.";
 				break;
 			case 2: //Benpipa
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Benpipa: Bryt STY<"+ ob((redudmg/10)+1)+", Faller\n BRYT: S+"+Math.floor(redudmg/10)+"Om en benpipa är bruten kan inte den skadade kroppsdelen användas. Se sidan 72 Läkning av benbrott för mer information.";
+				misc=traff.toString()+"Benpipa: Bryt STY<"+ ob((redudmg/10)+1)+", Faller\nBRYT: S+"+Math.floor(redudmg/10)+"Om en benpipa är bruten kan inte den skadade kroppsdelen användas. Se sidan 72 Läkning av benbrott för mer information.";
 				break;
 			case 3: //Benpipa
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg*0);
-				misc=traff.toString()+"Benpipa: Bryt STY<"+ ob((redudmg/10)+1)+", Faller\n BRYT: S+"+Math.floor(redudmg/10)+"Om en benpipa är bruten kan inte den skadade kroppsdelen användas. Se sidan 72 Läkning av benbrott för mer information.";
+				misc=traff.toString()+"Benpipa: Bryt STY<"+ ob((redudmg/10)+1)+", Faller\nBRYT: S+"+Math.floor(redudmg/10)+"Om en benpipa är bruten kan inte den skadade kroppsdelen användas. Se sidan 72 Läkning av benbrott för mer information.";
 				break;
 			case 4: //Muskler/Senor
 				trauma=Math.floor(redudmg/2);

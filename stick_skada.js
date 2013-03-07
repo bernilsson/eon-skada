@@ -7,7 +7,7 @@ function stick_skada(delomr,redudmg){
 	document.f2.txtarea.value=""
 	if (document.f1.check1.checked)
 		{
-			traff=obt(1);
+			traff=ob(1);
 			if ( traff > 10 )
 			{
 				traff=10;
@@ -56,7 +56,7 @@ function stick_skada(delomr,redudmg){
 				trauma=trauma+Math.floor(redudmg/10);
 				pain=pain+Math.floor(redudmg/2);
 				bleed=bleed+Math.floor(redudmg/10);
-				misc=traff.toString()+"N" + unescape("%E4") + "sa: Bryt STY<"+ob((redudmg/10)+1)+", " + unescape("%E4") + "rr\nBRYT: S+"+Math.floor(redudmg/10)+" Offrets n"+ unescape("%E4") +"sben "+ unescape("%E4") +"r brutet. Första gången detta h"+ unescape("%E4") +"nder(och inte efterföljande gånger) s"+ unescape("%E4") +"nks offrets PER med ett (-1).";
+				misc=traff.toString()+"N" + unescape("%E4") + "sa: Bryt STY<"+ob((redudmg/10)+1)+", " + unescape("%E4") + "rr\nBRYT: S+"+Math.floor(redudmg/10)+" Offrets n"+ unescape("%E4") +"sben "+ unescape("%E4") +"r brutet. FÃ¶rsta gÃ¥ngen detta h"+ unescape("%E4") +"nder(och inte efterfÃ¶ljande gÃ¥nger) s"+ unescape("%E4") +"nks offrets PER med ett (-1).";
 				break;
 			case 6:
 				trauma=trauma+Math.floor(redudmg/10);
@@ -115,13 +115,13 @@ function stick_skada(delomr,redudmg){
 						trauma=Math.floor(redudmg/2);
 						pain=Math.floor(redudmg/2);
 						bleed=Math.floor(redudmg/10);
-						misc=traff.toString()+"Skallben: Bryt STY<"+ob(redudmg/10)+", Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+", " + unescape("%E4") + "rr\nBRYT: S+"+Math.floor(redudmg/10)+" Om skallbenet krossas inneb"+ unescape("%E4") +"r det att offret har fått en spricka i skallbenet med hj"+ unescape("%E4") +"rnskakning och kraftig huvudv"+ unescape("%E4") +"rk som följd. Vid riktigt allvarliga skador kan benflisor tr"+ unescape("%E4") +"ngas in i hj"+ unescape("%E4") +"rnan och döden "+ unescape("%E4") +"r då n"+ unescape("%E4") +"ra förestående.  Se sidan 72 L"+ unescape("%E4") +"kning av benbrott för mer information.";
+						misc=traff.toString()+"Skallben: Bryt STY<"+ob(redudmg/10)+", Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+", " + unescape("%E4") + "rr\nBRYT: S+"+Math.floor(redudmg/10)+" Om skallbenet krossas inneb"+ unescape("%E4") +"r det att offret har fÃ¥tt en spricka i skallbenet med hj"+ unescape("%E4") +"rnskakning och kraftig huvudv"+ unescape("%E4") +"rk som fÃ¶ljd. Vid riktigt allvarliga skador kan benflisor tr"+ unescape("%E4") +"ngas in i hj"+ unescape("%E4") +"rnan och dÃ¶den "+ unescape("%E4") +"r dÃ¥ n"+ unescape("%E4") +"ra fÃ¶restÃ¥ende.  Se sidan 72 L"+ unescape("%E4") +"kning av benbrott fÃ¶r mer information.";
 						break;
 					case 4: //Skallben
 						trauma=Math.floor(redudmg/2);
 						pain=Math.floor(redudmg/2);
 						bleed=Math.floor(redudmg/10);
-						misc=traff.toString()+"Skallben: Bryt STY<"+ob(redudmg/10)+", Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om skallbenet krossas inneb"+ unescape("%E4") +"r det att offret har fått en spricka i skallbenet med hj"+ unescape("%E4") +"rnskakning och kraftig huvudv"+ unescape("%E4") +"rk som följd. Vid riktigt allvarliga skador kan benflisor tr"+ unescape("%E4") +"ngas in i hj"+ unescape("%E4") +"rnan och döden "+ unescape("%E4") +"r då n"+ unescape("%E4") +"ra förestående.  Se sidan 72 L"+ unescape("%E4") +"kning av benbrott för mer information.";
+						misc=traff.toString()+"Skallben: Bryt STY<"+ob(redudmg/10)+", Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om skallbenet krossas inneb"+ unescape("%E4") +"r det att offret har fÃ¥tt en spricka i skallbenet med hj"+ unescape("%E4") +"rnskakning och kraftig huvudv"+ unescape("%E4") +"rk som fÃ¶ljd. Vid riktigt allvarliga skador kan benflisor tr"+ unescape("%E4") +"ngas in i hj"+ unescape("%E4") +"rnan och dÃ¶den "+ unescape("%E4") +"r dÃ¥ n"+ unescape("%E4") +"ra fÃ¶restÃ¥ende.  Se sidan 72 L"+ unescape("%E4") +"kning av benbrott fÃ¶r mer information.";
 						break;
 					case 5: //Omt" + unescape("%F6") + "ckning
 						trauma=Math.floor(redudmg/10);
@@ -182,7 +182,7 @@ function stick_skada(delomr,redudmg){
 					trauma=Math.floor(redudmg/2);
 					pain=Math.floor(redudmg/2);
 					bleed=Math.floor(redudmg/10);
-					misc=traff.toString()+"Nackkotor: Bryt STY<"+ob(redudmg/10)+" , Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts så totalförlamas offret. Se sidan 72 L"+ unescape("%E4") +"kning av benbrott för mer information.";
+					misc=traff.toString()+"Nackkotor: Bryt STY<"+ob(redudmg/10)+" , Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om nackkotorna bryts sÃ¥ totalfÃ¶rlamas offret. Se sidan 72 L"+ unescape("%E4") +"kning av benbrott fÃ¶r mer information.";
 					break;
 				case 3: //Puls" + unescape("%E5") + "der
 					trauma=Math.floor(redudmg/2);
@@ -249,7 +249,7 @@ function stick_skada(delomr,redudmg){
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg/10);
-				misc=traff.toString()+"Benpipa: Bryt STY<"+ob((redudmg/10)+1)+", Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+", Tappar CV<"+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om en benpipa "+ unescape("%E4") +"r bruten kan inte den skadade kroppsdelen anv"+ unescape("%E4") +"ndas. Se sidan 72 L"+ unescape("%E4") +"kning av benbrott för mer information.";
+				misc=traff.toString()+"Benpipa: Bryt STY<"+ob((redudmg/10)+1)+", Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+", Tappar CV<"+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om en benpipa "+ unescape("%E4") +"r bruten kan inte den skadade kroppsdelen anv"+ unescape("%E4") +"ndas. Se sidan 72 L"+ unescape("%E4") +"kning av benbrott fÃ¶r mer information.";
 				break;
 			case 2: //Art" + unescape("%E4") + "rbl" + unescape("%F6") + "dning
 				trauma=Math.floor(redudmg/10);
@@ -352,13 +352,13 @@ function stick_skada(delomr,redudmg){
 				trauma=Math.floor(redudmg*1);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg/10);
-				misc=traff.toString()+"Ryggrad: Bryt STY<"+ob(redudmg/10)+", Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om ryggraden bryts av en tr"+ unescape("%E4") +"ff i Bröstkorgen blir offret förlamat från midjan och nedåt. Se sidan 72 L"+ unescape("%E4") +"kning av benbrott för mer information.";
+				misc=traff.toString()+"Ryggrad: Bryt STY<"+ob(redudmg/10)+", Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Om ryggraden bryts av en tr"+ unescape("%E4") +"ff i BrÃ¶stkorgen blir offret fÃ¶rlamat frÃ¥n midjan och nedÃ¥t. Se sidan 72 L"+ unescape("%E4") +"kning av benbrott fÃ¶r mer information.";
 				break;
 			case 7: //Revben
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg/10);
-				misc=traff.toString()+"Revben: Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+", Bryt STY<"+ob((redudmg/10)+1)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Brutna revben inneb"+ unescape("%E4") +"r att offret har svårare att röra sig. Se sidan 72 L"+ unescape("%E4") +"kning av benbrott för mer information.";
+				misc=traff.toString()+"Revben: Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+", Bryt STY<"+ob((redudmg/10)+1)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Brutna revben inneb"+ unescape("%E4") +"r att offret har svÃ¥rare att rÃ¶ra sig. Se sidan 72 L"+ unescape("%E4") +"kning av benbrott fÃ¶r mer information.";
 				break;
 			case 8: //Omt" + unescape("%F6") + "ckning
 				trauma=Math.floor(redudmg/10);
@@ -414,7 +414,7 @@ function stick_skada(delomr,redudmg){
 				trauma=Math.floor(redudmg*1);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg/10);
-				misc=traff.toString()+"Ryggrad: Bryt STY<"+ob(redudmg/10)+", Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" Slå genast ett normalt slag (Ob3T6) mot offrets Tur slås - lyckas detta så undgår offret att bli förlamad. Misslyckas slaget blir offret förlamat från midjan och neråt. Se sidan 72 L"+ unescape("%E4") +"kning av benbrott för mer information.";
+				misc=traff.toString()+"Ryggrad: Bryt STY<"+ob(redudmg/10)+", Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+"\nBRYT: S+"+Math.floor(redudmg/10)+" SlÃ¥ genast ett normalt slag (Ob3T6) mot offrets Tur slÃ¥s - lyckas detta sÃ¥ undgÃ¥r offret att bli fÃ¶rlamad. Misslyckas slaget blir offret fÃ¶rlamat frÃ¥n midjan och nerÃ¥t. Se sidan 72 L"+ unescape("%E4") +"kning av benbrott fÃ¶r mer information.";
 				break;
 			case 5: //Puls" + unescape("%E5") + "der
 				trauma=Math.floor(redudmg/2);
@@ -542,7 +542,7 @@ function stick_skada(delomr,redudmg){
 				trauma=Math.floor(redudmg/10);
 				pain=Math.floor(redudmg/2);
 				bleed=Math.floor(redudmg/10);
-				misc=traff.toString()+"Benpipa: Bryt STY<"+ob(redudmg/10)+", Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+", Ramlar\nBRYT: S+"+Math.floor(redudmg/10)+" Om en benpipa "+ unescape("%E4") +"r bruten kan inte den skadade kroppsdelen anv"+ unescape("%E4") +"ndas. Se sidan 72 L"+ unescape("%E4") +"kning av benbrott för mer information.";
+				misc=traff.toString()+"Benpipa: Bryt STY<"+ob(redudmg/10)+", Vapnet fastnar om anfallarens Tur "+ unescape("%E4") +"r mindre "+ unescape("%E4") +"n: "+ob(3)+", Ramlar\nBRYT: S+"+Math.floor(redudmg/10)+" Om en benpipa "+ unescape("%E4") +"r bruten kan inte den skadade kroppsdelen anv"+ unescape("%E4") +"ndas. Se sidan 72 L"+ unescape("%E4") +"kning av benbrott fÃ¶r mer information.";
 				break;
 			case 2: //Art" + unescape("%E4") + "rbl" + unescape("%F6") + "dning
 				trauma=Math.floor(redudmg/10);

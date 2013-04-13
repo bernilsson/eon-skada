@@ -7,7 +7,7 @@ function stick_skada(delomr,redudmg){
 	document.f2.txtarea.value=""
 	if (document.f1.check1.checked)
 		{
-			traff=obt(1);
+			traff=ob(1);
 			if ( traff > 10 )
 			{
 				traff=10;

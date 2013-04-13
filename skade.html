@@ -116,12 +116,25 @@ function toggle_precisionsanfall()
 
 }
 
+$(document).ready(function(){
+
+    $(document).bind('keypress',pressed);
+});
+
+$(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
 	</script>
   </head>
   <body>
 <form name=f1>
 <input type=text name=t2 value="" size=3>
-<input name=b1 type=button value='1T100' onClick='t100();find_hit(document.f1.hit.value,document.f1.t2.value,document.f1.dmgtype.value)';>
+<input name=b1 type=button value='1T100' onClick='t100();find_hit(document.f1.hit.value,document.f1.t2.value,document.f1.dmgtype.value)'; autofocus>
 <input type="checkbox" name=check1 !checked /><label for="check1">M&aring;lpunkter</label>
 <input type="checkbox" name=check2 !checked onchange="toggle_precisionsanfall()"; /><label for="check2">Precisionsanfall</label><br>
 <style type="text/css">
@@ -174,14 +187,14 @@ Tr&auml;ff:
 <br>
 Reducerad skadeverkan:
 <form name=f2>
-	<input type=number name=redudmg value=1 min=1 onChange='fuling(document.f1.t3.value,document.f2.redudmg.value);'>
-	<input name=b1 type=button value="OK" onClick='fuling(document.f1.t3.value,document.f2.redudmg.value);'><br>
+	<input type=number name=redudmg value=1 min=1 onChange='fuling(document.f1.t3.value,document.f2.redudmg.value);' onkeypress="return event.keyCode != 13;">
+	<input  name=b1 type=button value="OK" onClick='fuling(document.f1.t3.value,document.f2.redudmg.value);'><br>
 	<style type="text/css">
 	textarea {
     resize: none;
 }
 </style>
-<textarea name=txtarea rows="11" cols="50">
+<textarea name=txtarea rows="11" cols="50" disabled>
 </textarea>
 </form>
   </body>

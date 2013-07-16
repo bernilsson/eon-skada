@@ -7,6 +7,11 @@
 	Edited by Max von der Marwitz <max.mariwitz@gmail.com>
 -->
 
+<!--
+unescape("%E5") - å
+unescape("%E4") - ä
+unescape("%F6") - ö
+-->
 
 <html>  
   <head>
@@ -15,6 +20,7 @@
 	<script type="text/javascript" src="hugg_skada.js"></script>
 	<script type="text/javascript" src="kross_skada.js"></script>
 	<script type="text/javascript" src="stick_skada.js"></script>
+	<script type="text/javascript" src="inre_skada.js"></script>
 	<script type="text/javascript"> 
 	
 
@@ -182,13 +188,13 @@ z-index:-1;
   <option value=rightleg hidden>H&ouml;ger ben</option>
 </select>
 Tr&auml;ff:
-<input type=text name=t3 value="" disabled size=25>
+<input type=text name=t3 value="" disabled size=24><input type="text" name=hitarea disabled size=2>
 </form>
 <br>
 Reducerad skadeverkan:
-<form name=f2>
-	<input type=number name=redudmg value=1 min=1 onChange='fuling(document.f1.t3.value,document.f2.redudmg.value);' onkeypress="return event.keyCode != 13;">
-	<input  name=b1 type=button value="OK" onClick='fuling(document.f1.t3.value,document.f2.redudmg.value);'><br>
+<form name=f2 onsubmit='return false;'>
+	<input type=number name=redudmg value=1 min=1 onChange='fuling(document.f1.t3.value,document.f2.redudmg.value);';> 
+	<input  name=b1 type=submit value="OK" onClick='fuling(document.f1.t3.value,document.f2.redudmg.value);'><br>
 	<style type="text/css">
 	textarea {
     resize: none;

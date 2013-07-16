@@ -9,13 +9,16 @@ function find_hit(hitsel,hitnum,dmgtype){
 	switch (true) //Head
 	{
 		case ((hitnum >= 1) && (hitnum <= 4)):
-			document.f1.t3.value="Huvud - Ansikte [1]";
+			document.f1.t3.value="Huvud - Ansikte";
+			document.f1.hitarea.value="1";
 			break;
                 case ((hitnum >= 5) && (hitnum <= 8)):
-                        document.f1.t3.value="Huvud - Skalle [2]";
+                        document.f1.t3.value="Huvud - Skalle";
+						document.f1.hitarea.value="2";
                         break;
                 case ((hitnum >= 9) && (hitnum <= 10)):
-                        document.f1.t3.value="Huvud - Hals [3]";
+                        document.f1.t3.value="Huvud - Hals";
+						document.f1.hitarea.value="3";
                         break;
 
 	}
@@ -25,19 +28,24 @@ function find_hit(hitsel,hitnum,dmgtype){
 	switch (true) //Left Arm
 	{
 		case ((hitnum >= 1) && (hitnum <= 2)):
-			document.f1.t3.value="V" + unescape("%E4") + "nster arm - Skuldra [4]";
+			document.f1.t3.value="V" + unescape("%E4") + "nster arm - Skuldra";
+			document.f1.hitarea.value="4";
 			break;
 		case ((hitnum >= 3) && (hitnum <= 4)):
-			document.f1.t3.value="V" + unescape("%E4") + "nster arm - " + unescape("%F6") + "verarm [6]";
+			document.f1.t3.value="V" + unescape("%E4") + "nster arm - " + unescape("%F6") + "verarm";
+			document.f1.hitarea.value="6";
 			break;
 		case (hitnum == 5):
-			document.f1.t3.value="V" + unescape("%E4") + "nster arm - Armb" + unescape("%E5") + "ge [8]";
+			document.f1.t3.value="V" + unescape("%E4") + "nster arm - Armb" + unescape("%E5") + "ge";
+			document.f1.hitarea.value="8";
 			break;
 		case ((hitnum  >= 6) && (hitnum <= 8)):
-			document.f1.t3.value="V" + unescape("%E4") + "nster arm - Underarm [10]";
+			document.f1.t3.value="V" + unescape("%E4") + "nster arm - Underarm";
+			document.f1.hitarea.value="10";
 			break;
 		case ((hitnum  >= 9) && (hitnum <= 10)):
-			document.f1.t3.value="V" + unescape("%E4") + "nster arm - Hand [12]";
+			document.f1.t3.value="V" + unescape("%E4") + "nster arm - Hand";
+			document.f1.hitarea.value="12";
 			break;
 	}
 	break;
@@ -47,34 +55,42 @@ function find_hit(hitsel,hitnum,dmgtype){
         switch (true) //Right arm
         {
                 case ((hitnum >= 1) && (hitnum <= 2)):
-                        document.f1.t3.value="H" + unescape("%F6") + "ger arm - Skuldra [5]";
+                        document.f1.t3.value="H" + unescape("%F6") + "ger arm - Skuldra";
+						document.f1.hitarea.value="5";
                         break;
                 case ((hitnum >= 3) && (hitnum <= 4)):
-                        document.f1.t3.value="H" + unescape("%F6") + "ger arm - " + unescape("%F6") + "verarm [7]";
+                        document.f1.t3.value="H" + unescape("%F6") + "ger arm - " + unescape("%F6") + "verarm";
+						document.f1.hitarea.value="7";
                         break;
                 case (hitnum == 5):
-                        document.f1.t3.value="H" + unescape("%F6") + "ger arm - Armb" + unescape("%E5") + "ge [9]";
+                        document.f1.t3.value="H" + unescape("%F6") + "ger arm - Armb" + unescape("%E5") + "ge";
+						document.f1.hitarea.value="9";
                         break;
                 case ((hitnum  >= 6) && (hitnum <= 8)):
-                        document.f1.t3.value="H" + unescape("%F6") + "ger arm - Underarm [11]";
+                        document.f1.t3.value="H" + unescape("%F6") + "ger arm - Underarm";
+						document.f1.hitarea.value="11";
                         break;
                 case ((hitnum  >= 9) && (hitnum <= 10)):
-                        document.f1.t3.value="H" + unescape("%F6") + "ger arm - Hand [13]";
+                        document.f1.t3.value="H" + unescape("%F6") + "ger arm - Hand";
+						document.f1.hitarea.value="13";
                         break;
         }
         break;
         case "chesthugg": case "chestkross": case "cheststick": //Chest
-		document.f1.t3.value="Br" + unescape("%F6") + "stkorg [14]";
+		document.f1.t3.value="Br" + unescape("%F6") + "stkorg";
+		document.f1.hitarea.value="14";
         break;
 		case "abdomenhugg": case "abdomenkross": case "abdomenstick": //Belly
         hitnum=t10();
         switch (true) 
         {
                 case ((hitnum >= 1) && (hitnum <= 8)):
-			document.f1.t3.value="Buk - Mage [15]";
+					document.f1.t3.value="Buk - Mage";
+					document.f1.hitarea.value="15";
                         break;
                 case ((hitnum >= 9) && (hitnum <= 10)):
-			document.f1.t3.value="Buk - Underliv [16]";	
+						document.f1.t3.value="Buk - Underliv";	
+						document.f1.hitarea.value="16";
                         break;
         }
 		break;
@@ -83,19 +99,24 @@ function find_hit(hitsel,hitnum,dmgtype){
         switch (true) //Left leg
         {
                 case ((hitnum >= 1) && (hitnum <= 2)):
-			document.f1.t3.value="V" + unescape("%E4") + "nster ben - H" + unescape("%F6") + "ft [17]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster ben - H" + unescape("%F6") + "ft";
+						document.f1.hitarea.value="17";
                         break;
                 case ((hitnum >= 3) && (hitnum <= 4)):
-			document.f1.t3.value="V" + unescape("%E4") + "nster ben - L" + unescape("%E5") + "r [19]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster ben - L" + unescape("%E5") + "r";
+						document.f1.hitarea.value="19";
                         break;
                 case ((hitnum >= 5) && (hitnum <= 6)):
-			document.f1.t3.value="V" + unescape("%E4") + "nster ben - Kn" + unescape("%E4") + " [21]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster ben - Kn" + unescape("%E4");
+						document.f1.hitarea.value="21";
                         break;
                 case ((hitnum  >= 7) && (hitnum <= 9)):
-			document.f1.t3.value="V" + unescape("%E4") + "nster ben - Vad [23]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster ben - Vad";
+						document.f1.hitarea.value="23";
                         break;
                 case (hitnum  == 10):
-			document.f1.t3.value="V" + unescape("%E4") + "nster ben - Fot [25]";
+						document.f1.t3.value="V" + unescape("%E4") + "nster ben - Fot";
+						document.f1.hitarea.value="25";
                         break;
         }
         break;
@@ -104,19 +125,24 @@ function find_hit(hitsel,hitnum,dmgtype){
         switch (true) //Right Leg
         {
                 case ((hitnum >= 1) && (hitnum <= 2)):
-                        document.f1.t3.value="H" + unescape("%F6") + "ger ben - H" + unescape("%F6") + "ft [18]";
+                        document.f1.t3.value="H" + unescape("%F6") + "ger ben - H" + unescape("%F6") + "ft";
+						document.f1.hitarea.value="18";
                         break;
                 case ((hitnum >= 3) && (hitnum <= 4)):
-                        document.f1.t3.value="H" + unescape("%F6") + "ger ben - L" + unescape("%E5") + "r [20]";
+                        document.f1.t3.value="H" + unescape("%F6") + "ger ben - L" + unescape("%E5") + "r";
+						document.f1.hitarea.value="20";
                         break;
                 case ((hitnum >= 5) && (hitnum <= 6)):
-                        document.f1.t3.value="H" + unescape("%F6") + "ger ben - Kn" + unescape("%E4") + " [22]";
+                        document.f1.t3.value="H" + unescape("%F6") + "ger ben - Kn" + unescape("%E4");
+						document.f1.hitarea.value="22";
                         break;
                 case ((hitnum  >= 7) && (hitnum <= 9)):
-                        document.f1.t3.value="H" + unescape("%F6") + "ger ben - Vad [24]";
+                        document.f1.t3.value="H" + unescape("%F6") + "ger ben - Vad";
+						document.f1.hitarea.value="24";
                         break;
                 case (hitnum  == 10):
-                        document.f1.t3.value="H" + unescape("%F6") + "ger ben - Fot [26]";
+                        document.f1.t3.value="H" + unescape("%F6") + "ger ben - Fot";
+						document.f1.hitarea.value="26";
                         break;
         }
         break;
